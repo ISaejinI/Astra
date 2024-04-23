@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.75.0"
+    "sass": "^1.75.0",
+    "swiper": "^11.1.1"
   }
 }

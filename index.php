@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astra</title>
     <link rel="stylesheet" href="css/main.css" />
+    <script src="/script/script.js"></script>
 </head>
 
 <body>
@@ -28,8 +29,29 @@
     <section id="carousel">
         <div class="box">
             <h1>Les dernières planètes découvertes</h1>
-            <div class="car-elmt">
-
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="" alt="">
+                        <p></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="" alt="">
+                        <p></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="" alt="">
+                        <p></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="" alt="">
+                        <p></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="" alt="">
+                        <p></p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
