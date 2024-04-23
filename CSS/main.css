@@ -3,6 +3,7 @@
 /* -- BACKGROUND -- */
 body {
   background-color: #141414;
+  margin: 0 auto;
 }
 
 .logo {
@@ -24,6 +25,10 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+header {
+  background-image: linear-gradient(to right bottom, #9678f5, #8166d8, #6d54bc, #5943a1, #453287);
 }
 
 /*# sourceMappingURL=main.css.map */
