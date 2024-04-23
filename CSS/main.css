@@ -32,4 +32,14 @@ header {
   background-image: linear-gradient(to right bottom, #9678f5, #8166d8, #6d54bc, #5943a1, #453287);
 }
 
+/* -- CARROUSSEL -- */
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-slider img {
+  max-width: 45%;
+}
+
 /*# sourceMappingURL=main.css.map */
