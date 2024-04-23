@@ -3,3 +3,14 @@ body {
     margin: 0 auto;
     color: $white;
 }
+
+a {
+    &:link,
+    &:visited {
+        color: $white;
+        text-decoration: none;
+    }
+    &:hover {
+        color: $light-yellow;
+    }
+}

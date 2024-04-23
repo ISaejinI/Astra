@@ -7,10 +7,19 @@ body {
   color: #F5F5F5;
 }
 
+a:link, a:visited {
+  color: #F5F5F5;
+  text-decoration: none;
+}
+a:hover {
+  color: #F4E861;
+}
+
 .logo {
   font-family: "Syncopate", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 2em;
 }
 
 body {
@@ -28,8 +37,43 @@ h1 {
   font-style: normal;
 }
 
+.bu-head {
+  background-color: #F5B849;
+  padding: 0.2em 0.5em;
+  border-radius: 10px;
+}
+
+/* -- HEADER -- */
 header {
   background-image: linear-gradient(to right bottom, #9678f5, #8166d8, #6d54bc, #5943a1, #453287);
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav a {
+  padding: 0 1em;
+}
+
+/* -- SECTION PLANET --*/
+#planet {
+  background-image: url("/src/Sky-bg.jpg");
+  display: flex;
+  align-items: center;
+}
+#planet img {
+  max-width: 55%;
+  object-fit: contain;
+}
+#planet p {
+  font-size: 4rem;
+  width: 35%;
+  line-height: 1.5em;
+  background-color: rgba(20, 20, 20, 0.5019607843);
+  padding: 0.5em 1em;
 }
 
 /* -- CARROUSSEL -- */
@@ -37,7 +81,6 @@ header {
   width: 600px;
   height: 300px;
 }
-
 .swiper-slide img {
   max-width: 10em;
 }

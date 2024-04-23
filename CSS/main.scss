@@ -4,18 +4,55 @@
 @import 'fonts';
 @import 'buttons';
 
+/* -- HEADER -- */
+
 header {
     background-image: linear-gradient(to right bottom, #9678f5, #8166d8, #6d54bc, #5943a1, #453287);
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+    
+    nav {
+        display: flex;
+        align-items: center;
+        
+        a {
+            padding: 0 1em;
+        }
+    }
 }
 
+
+/* -- SECTION PLANET --*/
+
+#planet {
+    background-image: $bg-image;
+    display: flex;
+    align-items: center;
+
+    img {
+        max-width: 55%;
+        object-fit: contain;
+    }
+
+    p {
+        font-size: 4rem;
+        width: 35%;
+        line-height: 1.5em;
+        background-color: $black-op;
+        padding: 0.5em 1em;
+    }
+}
 
 /* -- CARROUSSEL -- */
 
 .swiper {
     width: 600px;
     height: 300px;
-}
 
-.swiper-slide img {
-    max-width: 10em;
+    &-slide {
+        img {
+            max-width: 10em;
+        }
+    }
 }
