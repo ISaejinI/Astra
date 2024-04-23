@@ -7,8 +7,9 @@ import 'swiper/css/navigation';
 const swiper = new Swiper ('.swiper', {
     direction: "vertical",
     loop: true,
+    modules: [Navigation],
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    },
+    }
 });
