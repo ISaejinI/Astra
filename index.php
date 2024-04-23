@@ -20,12 +20,19 @@
         </nav>
     </header>
 
-    <section class="planet">
+    <section id="planet">
         <img src="/src/Planet1.png" alt="">
         <p>Concevez, et donnez vie à vos propres planètes !</p>
     </section>
 
-    
+    <section id="carousel">
+        <div class="box">
+            <h1>Les dernières planètes découvertes</h1>
+            <div class="car-elmt">
+
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
