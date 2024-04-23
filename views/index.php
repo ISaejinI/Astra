@@ -31,7 +31,21 @@
                     <p>Pluton</p>
                 </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                direction: 'horizontal',
+                loop: true,
+                slidesPerView: 2,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
     </div>
 </section>
 
