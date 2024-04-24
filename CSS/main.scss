@@ -61,7 +61,7 @@ footer {
 #swiper-box {
     margin: 4em auto;
     max-width: 1100px;
-    background-image: $bg-purple-gradiant;
+    background-image: $bg-purple-gradiant-rev;
     border-radius: 30px;
     padding: 1em 3em;
 
@@ -126,7 +126,7 @@ main {
 /* -- CONNEXION / INSCRIPTION -- */
 
 .log {
-    background-image: $bg-purple-gradiant;
+    background-image: $bg-purple-gradiant-rev;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -174,7 +174,7 @@ main {
 
     input {
         margin: 0.75em 1em 0 1em;
-        padding: 0.95em;
+        padding: 0.7em;
         padding-left: 2.5em;
         border: none;
         border-radius: 10px;

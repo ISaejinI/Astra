@@ -98,7 +98,7 @@ footer {
 #swiper-box {
   margin: 4em auto;
   max-width: 1100px;
-  background-image: linear-gradient(to right bottom, #9678f5, #8166d8, #6d54bc, #5943a1, #453287);
+  background-image: linear-gradient(to right bottom, #453287, #5943a1, #6d54bc, #8166d8, #9678f5);
   border-radius: 30px;
   padding: 1em 3em;
 }
@@ -155,7 +155,7 @@ main {
 
 /* -- CONNEXION / INSCRIPTION -- */
 .log {
-  background-image: linear-gradient(to right bottom, #9678f5, #8166d8, #6d54bc, #5943a1, #453287);
+  background-image: linear-gradient(to right bottom, #453287, #5943a1, #6d54bc, #8166d8, #9678f5);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -197,7 +197,7 @@ main {
 }
 .log-inp input {
   margin: 0.75em 1em 0 1em;
-  padding: 0.95em;
+  padding: 0.7em;
   padding-left: 2.5em;
   border: none;
   border-radius: 10px;

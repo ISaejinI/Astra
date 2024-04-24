@@ -10,23 +10,29 @@
 
 <section>
     <div class="log">
-        <p>Connexion</p>
+        <p>Inscription</p>
         <form action="" method="post">
+            <div class="log-inp">
+                <span>
+                    <i class='bx bxs-user'></i>
+                </span>
+                <input type="text" name="username" id="username" required placeholder="Nom d'utilisateur *">
+            </div>
             <div class="log-inp">
                 <span>
                     <i class='bx bxs-envelope'></i>
                 </span>
-                <input type="email" name="email" id="email" required placeholder="Adresse mail">
+                <input type="email" name="email" id="email" required placeholder="Adresse mail *">
             </div>
             <div class="log-inp">
                 <span>
                     <i class='bx bxs-key'></i>
                 </span>
-                <input type="password" name="pwd" id="pwd" required placeholder="Mot de passe">
+                <input type="password" name="pwd" id="pwd" required placeholder="Mot de passe *">
             </div>
             <br>
 
-            <input type="submit" value="Connexion" class="bu-head">
+            <input type="submit" value="Inscription" class="bu-head">
         </form>
     </div>
 </section>
