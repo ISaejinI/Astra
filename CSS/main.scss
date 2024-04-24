@@ -7,19 +7,31 @@
 /* -- HEADER -- */
 
 header {
-    background-image: linear-gradient(to right bottom, #9678f5, #8166d8, #6d54bc, #5943a1, #453287);
+    background-image: $bg-purple-gradiant;
     display: flex;
     justify-content: space-between;
     padding: 1em 2em;
-    
+
     nav {
         display: flex;
         align-items: center;
-        
+
         a {
             padding: 0 1em;
         }
     }
+}
+
+/* -- FOOTER -- */
+
+footer {
+    background-image: $bg-purple-gradiant;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding-bottom: 0.75em;
+    padding-top: 0.75em;
 }
 
 
@@ -46,6 +58,19 @@ header {
 
 /* -- CARROUSSEL -- */
 
+#swiper-box {
+    margin: 4em auto;
+    max-width: 1100px;
+    background-image: $bg-purple-gradiant;
+    border-radius: 30px;
+    padding: 1em 3em;
+
+    h1 {
+        color: $dark-yellow;
+        font-size: 2em;
+    }
+}
+
 .swiper {
     width: 600px;
     height: 300px;
@@ -55,4 +80,18 @@ header {
             max-width: 10em;
         }
     }
+}
+
+/* -- AFFICHAGE TOUTES LES PLANETES -- */
+
+#planets {
+    position: relative;
+}
+
+#filter {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    color: $black;
 }

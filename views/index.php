@@ -2,11 +2,11 @@
 
 <section id="planet">
     <img src="../src/Planet1.png" alt="">
-    <p>Concevez, et donnez vie à vos propres planètes !</p>
+    <p class="montserrat">Concevez, et donnez vie à vos propres planètes !</p>
 </section>
 
 <section id="carousel">
-    <div class="box">
+    <div id="swiper-box">
         <h1>Les dernières planètes découvertes</h1>
         <div class="swiper">
             <div class="swiper-wrapper">
@@ -38,12 +38,23 @@
             const swiper = new Swiper('.swiper', {
                 direction: 'horizontal',
                 loop: true,
-                slidesPerView: 2,
+                slidesPerView:3,
                 spaceBetween: 10,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
+                autoplay: {
+                    delay: 4000,
+                },
+                // breakpoints: {
+                //     640: {
+                //         slidesPerView: 1,
+                //     },
+                //     1100: {
+                //         slidesPerView: 3,
+                //     },
+                // },
             });
         </script>
     </div>

@@ -5,6 +5,12 @@ body {
   background-color: #141414;
   margin: 0 auto;
   color: #F5F5F5;
+  position: relative;
+  min-height: 100vh;
+}
+
+main {
+  padding-bottom: 4em;
 }
 
 a:link, a:visited {
@@ -30,7 +36,7 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
-h1 {
+h1, .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -58,6 +64,17 @@ header nav a {
   padding: 0 1em;
 }
 
+/* -- FOOTER -- */
+footer {
+  background-image: linear-gradient(to right bottom, #9678f5, #8166d8, #6d54bc, #5943a1, #453287);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding-bottom: 0.75em;
+  padding-top: 0.75em;
+}
+
 /* -- SECTION PLANET --*/
 #planet {
   background-image: url("/src/Sky-bg.jpg");
@@ -77,12 +94,37 @@ header nav a {
 }
 
 /* -- CARROUSSEL -- */
+#swiper-box {
+  margin: 4em auto;
+  max-width: 1100px;
+  background-image: linear-gradient(to right bottom, #9678f5, #8166d8, #6d54bc, #5943a1, #453287);
+  border-radius: 30px;
+  padding: 1em 3em;
+}
+#swiper-box h1 {
+  color: #F5B849;
+  font-size: 2em;
+}
+
 .swiper {
   width: 600px;
   height: 300px;
 }
 .swiper-slide img {
   max-width: 10em;
+}
+
+/* -- AFFICHAGE TOUTES LES PLANETES -- */
+#planets {
+  position: relative;
+}
+
+#filter {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F5F5;
+  color: #141414;
 }
 
 /*# sourceMappingURL=main.css.map */

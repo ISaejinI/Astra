@@ -2,6 +2,12 @@ body {
     background-color: $black;
     margin: 0 auto;
     color: $white;
+    position: relative;
+    min-height: 100vh;
+}
+
+main {
+    padding-bottom: 4em;
 }
 
 a {
