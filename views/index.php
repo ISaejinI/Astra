@@ -11,35 +11,45 @@
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="../src/Planet1.png" alt="">
-                    <p>Mercure</p>
+                    <a href="./planet.php">
+                        <img src="../src/Planet1.png" alt="">
+                        <p>Mercure</p>
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <img src="../src/Planet2.png" alt="">
-                    <p>Venus</p>
+                    <a href="./planet.php">
+                        <img src="../src/Planet2.png" alt="">
+                        <p>Venus</p>
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <img src="../src/Planet3.png" alt="">
-                    <p>Terre</p>
+                    <a href="./planet.php">
+                        <img src="../src/Planet3.png" alt="">
+                        <p>Terre</p>
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <img src="../src/Planet4.png" alt="">
-                    <p>Lune</p>
+                    <a href="./planet.php">
+                        <img src="../src/Planet4.png" alt="">
+                        <p>Lune</p>
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <img src="../src/Planet5.png" alt="">
-                    <p>Pluton</p>
+                    <a href="./planet.php">
+                        <img src="../src/Planet5.png" alt="">
+                        <p>Pluton</p>
+                    </a>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"><i class='bx bx-right-arrow-circle' ></i></div>
+            <div class="swiper-button-prev"><i class='bx bx-left-arrow-circle' ></i></div>
         </div>
         <script>
             const swiper = new Swiper('.swiper', {
                 direction: 'horizontal',
                 loop: true,
-                slidesPerView:3,
-                spaceBetween: 10,
+                slidesPerView: 3,
+                spaceBetween: 7,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',

@@ -108,11 +108,26 @@ footer {
 }
 
 .swiper {
-  width: 600px;
+  width: 100%;
   height: 300px;
 }
+.swiper-slide a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.swiper-slide a p {
+  font-size: 1.5em;
+}
 .swiper-slide img {
-  max-width: 10em;
+  max-width: 12em;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  display: none;
+}
+.swiper-button-next i, .swiper-button-prev i {
+  color: #F5B849;
+  font-size: 2em;
 }
 
 /* -- AFFICHAGE TOUTES LES PLANETES -- */
