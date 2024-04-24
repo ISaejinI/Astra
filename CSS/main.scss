@@ -84,14 +84,26 @@ footer {
 
 /* -- AFFICHAGE TOUTES LES PLANETES -- */
 
-#planets {
-    position: relative;
+#all-planets {
+    display: flex;
 }
 
 #filter {
-    position: fixed;
     display: flex;
     flex-direction: column;
     background-color: $white;
     color: $black;
+    max-width: 10%;
+    min-height: 100%;
+}
+
+#planets {
+    position: relative;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    img {
+        max-width: 33%;
+    }
 }
