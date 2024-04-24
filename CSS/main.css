@@ -119,23 +119,37 @@ footer {
   display: flex;
 }
 
+main {
+  position: relative;
+  height: 100%;
+}
+
 #filter {
   display: flex;
   flex-direction: column;
   background-color: #F5F5F5;
   color: #141414;
-  max-width: 10%;
-  min-height: 100%;
+  width: 15%;
+  bottom: 0;
+  top: 0;
+  position: absolute;
 }
 
 #planets {
   position: relative;
-  max-width: 90%;
+  max-width: 85%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  margin-left: 15%;
 }
 #planets img {
-  max-width: 33%;
+  width: 10em;
+}
+#planets a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
