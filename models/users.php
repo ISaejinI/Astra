@@ -71,6 +71,7 @@ function register($username, $email, $passwd) {
 
 
     } else {
+        //compte déjà existant
         $_SESSION['error'] = "Un compte existe déjà pour cette adresse mail";
         header("Location: ../views/register.php");
     }
