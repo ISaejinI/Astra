@@ -1,4 +1,4 @@
-<?php require "../template/header.html" ?>
+<?php require "../template/header.php" ?>
 
 <section id="planet">
     <img src="../src/Planet1.png" alt="">

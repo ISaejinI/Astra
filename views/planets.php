@@ -1,4 +1,4 @@
-<?php require "../template/header.html" ?>
+<?php require "../template/header.php" ?>
 
 <section id="all-planets">
     <div id="filter">Mes éléments</div>
