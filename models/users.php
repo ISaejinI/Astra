@@ -32,17 +32,20 @@ function login($mail, $pwd)
         //Un compte existe avec ce mail
         if ($line['password'] == sha1($pwd)) {
             //Le couple mdp et mail est OK
-            $_SESSION['id'] = $line['id'];
-            header("Location: ../views/index.php");
+            $_SESSION["id"] = $line['id'];
+            echo $_SESSION["id"];
+            // header("Location: ../views/index.php");
             
         } else {
-            $_SESSION['error'] = "Mot de passe incorrect";
-            header("Location: ../views/login.php");
+            $_SESSION["error"] = "Mot de passe incorrect";
+            echo $_SESSION["error"];
+            // header("Location: ../views/login.php");
             
         }
     } else {
         $_SESSION['error'] = "Aucun compte existant à cette adresse";
-        header("Location: ../views/login.php");
+        // header("Location: ../views/login.php");
+        echo $_SESSION["error"];
         
     }
 

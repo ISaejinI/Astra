@@ -2,7 +2,7 @@
 
 <section id="planet">
     <img src="../src/Planet1.png" alt="">
-    <p class="montserrat">Concevez, et donnez vie à vos propres planètes !</p>
+    <p class="montserrat">Concevez, et donnez vie à vos propres planètes ! <?php echo $_SESSION['error'] ?></p>
 </section>
 
 <section id="carousel">
