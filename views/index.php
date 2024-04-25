@@ -10,39 +10,27 @@
         <h1>Les dernières planètes découvertes</h1>
         <div class="swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
+
+                <?php
+                require "../models/config.php";
+                global $dbAstra;
+                $req = 'SELECT * FROM planets ORDER BY id DESC LIMIT 5';
+
+                $planets = $dbAstra->prepare($req);
+                $planets->execute();
+
+                while ($line = $planets->fetch()) {
+                    echo '<div class="swiper-slide">
                     <a href="./planet.php">
-                        <img src="../src/Planet1.png" alt="">
-                        <p>Mercure</p>
+                        <img src="../src/' . $line["urlImg"] . '" alt="">
+                        <p>' . $line["name"] . '</p>
                     </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="./planet.php">
-                        <img src="../src/Planet2.png" alt="">
-                        <p>Venus</p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="./planet.php">
-                        <img src="../src/Planet3.png" alt="">
-                        <p>Terre</p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="./planet.php">
-                        <img src="../src/Planet4.png" alt="">
-                        <p>Lune</p>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="./planet.php">
-                        <img src="../src/Planet5.png" alt="">
-                        <p>Pluton</p>
-                    </a>
-                </div>
+                </div>';
+                }
+                ?>
             </div>
-            <div class="swiper-button-next"><i class='bx bx-right-arrow-circle' ></i></div>
-            <div class="swiper-button-prev"><i class='bx bx-left-arrow-circle' ></i></div>
+            <div class="swiper-button-next"><i class='bx bx-right-arrow-circle'></i></div>
+            <div class="swiper-button-prev"><i class='bx bx-left-arrow-circle'></i></div>
         </div>
         <script>
             const swiper = new Swiper('.swiper', {
