@@ -17,7 +17,11 @@
         <a href="../views/index.php" class="logo">Astra</a>
         <nav>
             <a href="../views/planets.php">Explorer les planètes</a>
-            <a href="../views/createPlanet.php">Créer une planète</a>
+            <?php
+            if (isset($_SESSION['id'])) {
+                echo '<a href="../views/createPlanet.php">Créer une planète</a>';
+            }
+            ?>
             <a href="../views/login.php">Connexion</a>
             <a href="../views/register.php" class="bu-head">Inscription</a>
         </nav>
