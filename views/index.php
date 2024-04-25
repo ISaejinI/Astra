@@ -10,7 +10,6 @@
         <h1>Les dernières planètes découvertes</h1>
         <div class="swiper">
             <div class="swiper-wrapper">
-
                 <?php
                 require "../models/config.php";
                 global $dbAstra;
@@ -21,11 +20,11 @@
 
                 while ($line = $planets->fetch()) {
                     echo '<div class="swiper-slide">
-                    <a href="./planet.php">
-                        <img src="../src/' . $line["urlImg"] . '" alt="">
-                        <p>' . $line["name"] . '</p>
-                    </a>
-                </div>';
+                            <a href="./planet.php">
+                                <img src="../src/' . $line["urlImg"] . '" alt="">
+                                <p>' . $line["name"] . '</p>
+                            </a>
+                        </div>';
                 }
                 ?>
             </div>

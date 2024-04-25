@@ -1,5 +1,6 @@
 <?php
 require "./config.php";
+session_start();
 
 if (isset($_POST["logmail"]) && isset($_POST["logpwd"])) {
     login($_POST["logmail"], $_POST["logpwd"]);
@@ -39,17 +40,15 @@ function login($mail, $pwd)
             //Le couple mdp et mail est OK
             $_SESSION["id"] = $line['id'];
             echo $_SESSION["id"];
-            // header("Location: ../views/index.php");
+            header("Location: ../views/index.php");
             
         } else {
             $_SESSION["error"] = "Mot de passe incorrect";
             echo $_SESSION["error"];
-            // header("Location: ../views/login.php");
+            header("Location: ../views/login.php");
             
         }
-        
     }
-
 };
 
 function register($username, $email, $passwd) {
