@@ -11,18 +11,23 @@
 <section>
     <div class="log">
         <p>Connexion</p>
-        <form action="" method="post">
+        <?php
+        if (isset($_SESSION['error'])) {
+            echo '<span class="error">' . $_SESSION["error"] . '</span>';
+        }
+        ?>
+        <form action="../models/users.php" method="post">
             <div class="log-inp">
                 <span>
                     <i class='bx bxs-envelope'></i>
                 </span>
-                <input type="email" name="email" id="email" required placeholder="Adresse mail">
+                <input type="email" name="logmail" id="logmail" required placeholder="Adresse mail">
             </div>
             <div class="log-inp">
                 <span>
                     <i class='bx bxs-key'></i>
                 </span>
-                <input type="password" name="pwd" id="pwd" required placeholder="Mot de passe">
+                <input type="password" name="logpwd" id="logpwd" required placeholder="Mot de passe">
             </div>
             <br>
 

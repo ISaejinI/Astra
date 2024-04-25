@@ -11,7 +11,13 @@
 <section>
     <div class="log">
         <p>Inscription</p>
-        <form action="" method="post">
+        <?php
+        if (isset($_SESSION['error'])) {
+            echo '<span class="error">' . $_SESSION["error"] . '</span>';
+        }
+        ?>
+
+        <form action="../models/users.php" method="post">
             <div class="log-inp">
                 <span>
                     <i class='bx bxs-user'></i>
