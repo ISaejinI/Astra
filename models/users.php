@@ -29,6 +29,11 @@ function login($mail, $pwd)
     //Si retourne pas ligne -> dire que pas de compte à cette adresse
 
     if ($line === false) {
+        $_SESSION['error'] = "Aucun compte existant à cette adresse";
+        // header("Location: ../views/login.php");
+        echo $_SESSION["error"];
+
+    } else {
         //Un compte existe avec ce mail
         if ($line['password'] == sha1($pwd)) {
             //Le couple mdp et mail est OK
@@ -42,10 +47,6 @@ function login($mail, $pwd)
             // header("Location: ../views/login.php");
             
         }
-    } else {
-        $_SESSION['error'] = "Aucun compte existant à cette adresse";
-        // header("Location: ../views/login.php");
-        echo $_SESSION["error"];
         
     }
 
