@@ -203,3 +203,20 @@ main {
         background-color: $white;
     }
 }
+
+/* -- CRÉATION DE PLANETE -- */
+
+.box-form {
+    background-color: $white;
+    color: $black;
+
+    p {
+        color: $dark-purple;
+    }
+
+    label {
+        span {
+            color: $dark-yellow;
+        }
+    }
+}

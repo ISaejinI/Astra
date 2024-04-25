@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Syncopate&display=swap");
 /* -- COLORS -- */
 /* -- BACKGROUND -- */
@@ -217,6 +218,18 @@ main {
   border: none;
   border-radius: 10px;
   background-color: #F5F5F5;
+}
+
+/* -- CRÉATION DE PLANETE -- */
+.box-form {
+  background-color: #F5F5F5;
+  color: #141414;
+}
+.box-form p {
+  color: #453287;
+}
+.box-form label span {
+  color: #F5B849;
 }
 
 /*# sourceMappingURL=main.css.map */
