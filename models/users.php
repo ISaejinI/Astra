@@ -34,13 +34,16 @@ function login($mail, $pwd)
             //Le couple mdp et mail est OK
             $_SESSION['id'] = $line['id'];
             header("Location: ../views/index.php");
+            exit;
         } else {
             $_SESSION['error'] = "Mot de passe incorrect";
             header("Location: ../views/login.php");
+            exit;
         }
     } else {
         $_SESSION['error'] = "Aucun compte existant à cette adresse";
         header("Location: ../views/login.php");
+        exit;
     }
 
 };
@@ -68,12 +71,14 @@ function register($username, $email, $passwd) {
         $_SESSION['id'] = $dbAstra -> lastInsertId();
 
         header("Location: ../views/index.php");
+        exit;
 
 
     } else {
         //compte déjà existant
         $_SESSION['error'] = "Un compte existe déjà pour cette adresse mail";
         header("Location: ../views/register.php");
+        exit;
     }
 }
 
