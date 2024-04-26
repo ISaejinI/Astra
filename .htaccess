@@ -10,6 +10,6 @@
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
 
-    RewriteRule ^(.*)/(\d*)/ index.php?url=$1&index=$2 [QSA,L]
+    RewriteRule ^(.*)/(\d*)/ index.php?url=$1&id=$2 [QSA,L]
     RewriteRule ^(.*)/$ index.php?url=$1 [QSA,L]
 </IfModule>
