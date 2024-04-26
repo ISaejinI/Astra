@@ -20,11 +20,13 @@
             <a href="../views/planets.php">Explorer les planètes</a>
             <?php
             if (isset($_SESSION['id'])) {
-                echo '<a href="../views/createPlanet.php">Créer une planète</a>';
+                echo '<a href="../views/createPlanet.php">Créer une planète</a>
+                <a href="../models/logout.php" class="bu-head">Déconnexion</a>';
+            } else {
+                echo '<a href="../views/login.php">Connexion</a>
+                      <a href="../views/register.php" class="bu-head">Inscription</a>';
             }
             ?>
-            <a href="../views/login.php">Connexion</a>
-            <a href="../views/register.php" class="bu-head">Inscription</a>
         </nav>
     </header>
 
