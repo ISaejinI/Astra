@@ -1,5 +1,3 @@
-<?php require "../template/header.php" ?>
-
 <style>
     body {
         background-image: url(../src/Sky-bg.jpg);
@@ -35,5 +33,3 @@
         </form>
     </div>
 </section>
-
-<?php require "../template/footer.html" ?>

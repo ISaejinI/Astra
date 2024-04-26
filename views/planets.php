@@ -1,51 +1,21 @@
-<?php require "../template/header.php" ?>
-
 <section id="all-planets">
     <div id="filter">Mes éléments</div>
     <div id="planets">
-        <div class="one-planet">
-            <a href="./planet.php">
-                <img src="../src/Planet3.png" alt="">
-                <p>Pluton</p>
-            </a>
-        </div>
-        <div class="one-planet">
-            <a href="./planet.php">
-                <img src="../src/Planet3.png" alt="">
-                <p>Pluton</p>
-            </a>
-        </div>
-        <div class="one-planet">
-            <a href="./planet.php">
-                <img src="../src/Planet3.png" alt="">
-                <p>Pluton</p>
-            </a>
-        </div>
-        <div class="one-planet">
-            <a href="./planet.php">
-                <img src="../src/Planet3.png" alt="">
-                <p>Pluton</p>
-            </a>
-        </div>
-        <div class="one-planet">
-            <a href="./planet.php">
-                <img src="../src/Planet3.png" alt="">
-                <p>Pluton</p>
-            </a>
-        </div>
-        <div class="one-planet">
-            <a href="./planet.php">
-                <img src="../src/Planet3.png" alt="">
-                <p>Pluton</p>
-            </a>
-        </div>
-        <div class="one-planet">
-            <a href="./planet.php">
-                <img src="../src/Planet3.png" alt="">
-                <p>Pluton</p>
-            </a>
-        </div>
+
+        <?php
+            $req = 'SELECT * FROM planets ORDER BY id DESC';
+            $planets = $dbAstra->prepare($req);
+            $planets->execute();
+
+            while ($line = $planets->fetch()) {
+                echo '<div class="one-planet">
+                        <a href="planet/'.$line['id'].'">
+                            <img src="../src/' . $line["urlImg"] . '" alt="">
+                            <p>' . $line["name"] . '</p>
+                        </a>
+                      </div>';
+            }
+        ?>
+
     </div>
 </section>
-
-<?php require "../template/footer.html" ?>

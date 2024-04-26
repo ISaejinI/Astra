@@ -31,7 +31,7 @@ function login($mail, $pwd)
 
     if ($line === false) {
         $_SESSION['error'] = "Aucun compte existant à cette adresse";
-        // header("Location: ../views/login.php");
+        header("Location: /login/");
         echo $_SESSION["error"];
 
     } else {
@@ -40,12 +40,12 @@ function login($mail, $pwd)
             //Le couple mdp et mail est OK
             $_SESSION["id"] = $line['id'];
             echo $_SESSION["id"];
-            header("Location: ../views/index.php");
+            header("Location: /accueil/");
             
         } else {
             $_SESSION["error"] = "Mot de passe incorrect";
             echo $_SESSION["error"];
-            header("Location: ../views/login.php");
+            header("Location: /login/");
             
         }
     }
@@ -73,14 +73,14 @@ function register($username, $email, $passwd) {
         $_SESSION['error'] = "Compte créé";
         $_SESSION['id'] = $dbAstra -> lastInsertId();
 
-        header("Location: ../views/index.php");
+        header("Location: /accueil/");
         
 
 
     } else {
         //compte déjà existant
         $_SESSION['error'] = "Un compte existe déjà pour cette adresse mail";
-        header("Location: ../views/register.php");
+        header("Location: /register/");
         
     }
 }

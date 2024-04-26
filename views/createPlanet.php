@@ -1,5 +1,3 @@
-<?php require "../template/header.php" ?>
-
 <section class="creation">
     <div class="box-form">
         <p>Créer une nouvelle planète</p>
@@ -66,5 +64,3 @@
 
     </div>
 </section>
-
-<?php require "../template/footer.html" ?>

@@ -1,5 +1,5 @@
 <?php 
-session_start();
+    session_start();
     $_SESSION = array(); //nettoie le tableau de session
     session_destroy();
-    header('Location:../views/index.php');
+    header('Location: /accueil/');

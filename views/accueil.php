@@ -1,5 +1,3 @@
-<?php require "../template/header.php" ?>
-
 <section id="planet">
     <img src="../src/Planet1.png" alt="">
     <p class="montserrat">Concevez, et donnez vie à vos propres planètes !</p>
@@ -11,21 +9,19 @@
         <div class="swiper">
             <div class="swiper-wrapper">
                 <?php
-                require "../models/config.php";
-                global $dbAstra;
-                $req = 'SELECT * FROM planets ORDER BY id DESC LIMIT 5';
+                    $req = 'SELECT * FROM planets ORDER BY id DESC LIMIT 5';
 
-                $planets = $dbAstra->prepare($req);
-                $planets->execute();
+                    $planets = $dbAstra->prepare($req);
+                    $planets->execute();
 
-                while ($line = $planets->fetch()) {
-                    echo '<div class="swiper-slide">
-                            <a href="./planet.php">
-                                <img src="../src/' . $line["urlImg"] . '" alt="">
-                                <p>' . $line["name"] . '</p>
-                            </a>
-                        </div>';
-                }
+                    while ($line = $planets->fetch()) {
+                        echo '<div class="swiper-slide">
+                                <a href="/planet/'.$line['id'].'/">
+                                    <img src="../src/' . $line["urlImg"] . '" alt="">
+                                    <p>' . $line["name"] . '</p>
+                                </a>
+                            </div>';
+                    }
                 ?>
             </div>
             <div class="swiper-button-next"><i class='bx bx-right-arrow-circle'></i></div>
@@ -56,5 +52,3 @@
         </script>
     </div>
 </section>
-
-<?php require "../template/footer.html" ?>
