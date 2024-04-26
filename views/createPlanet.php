@@ -43,7 +43,7 @@
             <label for="desc">Description de la planète <span>*</span></label>
             <textarea name="desc" rows="10" cols="30" placeholder="Une description de la planète, son histoire, son climat..."></textarea>
 
-            <p>Le planète est elle habitable ? <span>*</span></p>
+            <p>La planète est elle habitable ? <span>*</span></p>
             <label for="oui">Oui</label>
             <input type="radio" id="oui" name="reponse" value="TRUE">
 
