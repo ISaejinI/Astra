@@ -19,8 +19,6 @@
                 $req = 'SELECT * FROM galaxies';
                 $galaxies = $dbAstra->prepare($req);
                 $galaxies->execute();
-
-                var_dump($line);
                 
                 while ($line = $galaxies->fetch()) {
                     echo '<option value="'.$line["id"].'">'.$line["name"].'</option>';
@@ -30,18 +28,17 @@
             </select>
 
             <p>Environnement <span>*</span></p>
-            <input type="checkbox" id="forest" name="env[]" value="oui">
-            <label for="forest">Forêts</label>
 
-            <input type="checkbox" id="mountain" name="env[]" value="non">
-            <label for="mountain">Montagnes</label>
+            <?php
+            $req = 'SELECT * FROM environnements';
+            $envts = $dbAstra->prepare($req);
+            $envts->execute();
 
-            <input type="checkbox" id="ocean" name="env[]" value="non">
-            <label for="ocean">Océans</label>
-
-            <input type="checkbox" id="desert" name="env[]" value="non">
-            <label for="desert">Deserts</label>
-
+            while ($line = $envts->fetch()) {
+                echo '<input type="checkbox" id="'.$line["name"].'" name="env[]" value="'.$line["id"].'">';
+                echo '<label for="'.$line["name"].'">'.$line["name"].'</label>';
+            }
+            ?>
 
             <label for="desc">Description de la planète <span>*</span></label>
             <textarea name="desc" rows="10" cols="30" placeholder="Une description de la planète, son histoire, son climat..."></textarea>
@@ -58,17 +55,17 @@
             <input type="number" name="nbhab" id="nbhab" required>
 
             <p>Population <span style="font-size: 0.6em;">(par qui est peuplé la planète)</span></p>
-            <input type="checkbox" id="humain" name="population[]" value="oui">
-            <label for="humain">Humains</label>
+            
+            <?php
+            $req = 'SELECT * FROM populations';
+            $pops = $dbAstra->prepare($req);
+            $pops->execute();
 
-            <input type="checkbox" id="ewok" name="population[]" value="non">
-            <label for="ewok">Ewok</label>
-
-            <input type="checkbox" id="hobbit" name="population[]" value="non">
-            <label for="hobbit">Hobbit</label>
-
-            <input type="checkbox" id="nain" name="population[]" value="non">
-            <label for="nain">Nain</label>
+            while ($line = $pops->fetch()) {
+                echo '<input type="checkbox" id="'.$line["name"].'" name="pop[]" value="'.$line["id"].'">';
+                echo '<label for="'.$line["name"].'">'.$line["name"].'</label>';
+            }
+            ?>
         </fieldset>
 
     </div>
