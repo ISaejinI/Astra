@@ -14,10 +14,18 @@
 
             <label for="galaxie">Système solaire <span>*</span></label>
             <select name="galaxie" id="galaxie">
-                <option value="Soleil">Soleil</option>
-                <option value="Soleil">Soleil</option>
-                <option value="Soleil">Soleil</option>
-                <option value="Soleil">Soleil</option>
+                <?php 
+                $req = 'SELECT * FROM galaxies';
+                $galaxies = $dbAstra->prepare($req);
+                $galaxies->execute();
+
+                var_dump($line);
+                
+                while ($line = $galaxies->fetchAll()) {
+                    echo '<option value="'.$line["id"].'">'.$line["name"].'</option>';
+                };
+
+                ?>
             </select>
 
             <p>Environnement <span>*</span></p>
