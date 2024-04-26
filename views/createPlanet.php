@@ -14,6 +14,7 @@
 
             <label for="galaxie">Système solaire <span>*</span></label>
             <select name="galaxie" id="galaxie">
+                <option value="">-------</option>
                 <?php 
                 $req = 'SELECT * FROM galaxies';
                 $galaxies = $dbAstra->prepare($req);
@@ -21,7 +22,7 @@
 
                 var_dump($line);
                 
-                while ($line = $galaxies->fetchAll()) {
+                while ($line = $galaxies->fetch()) {
                     echo '<option value="'.$line["id"].'">'.$line["name"].'</option>';
                 };
 
