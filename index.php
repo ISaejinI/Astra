@@ -15,9 +15,6 @@
     if (!isset($_GET['url'])) {
         require "./views/accueil.php";
     }
-    // elseif (condition) {
-        
-    // }
     else {
         require "./views/{$_GET['url']}.php";
     }
