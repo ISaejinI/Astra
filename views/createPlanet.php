@@ -41,6 +41,9 @@
                 }
                 ?>
 
+                <label for="climat">Climat <span>*</span></label>
+                <input type="text" name="climat" id="climat" required>
+
                 <label for="desc">Description de la planète <span>*</span></label>
                 <textarea name="desc" rows="10" cols="30" placeholder="Une description de la planète, son histoire, son climat..."></textarea>
 

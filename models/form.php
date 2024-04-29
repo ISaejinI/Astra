@@ -32,7 +32,7 @@ $valeurs = [
     ':planetHabs' => $_POST['nbhab'],
     ':planetImg' => $imgname,
     ':planetHab' => $_POST['habitable'],
-    ':planetClimat' => $_POST['']
+    ':planetClimat' => $_POST['climat']
 ];
 
 
