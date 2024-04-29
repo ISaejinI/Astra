@@ -1,7 +1,4 @@
 <?php
-require "./config.php";
-session_start();
-
 if (isset($_POST["logmail"]) && isset($_POST["logpwd"])) {
     login($_POST["logmail"], $_POST["logpwd"]);
 }

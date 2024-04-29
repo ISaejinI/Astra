@@ -4,14 +4,20 @@
     require "./models/config.php";
     global $dbAstra;
 
+
+    if (!empty($_POST)) {
+        require "./models/form.php";
+    }
+
+
     //Affichage des pages
     require './template/header.php';
 
-    //Il faut réussir à afficher la page
     
     // var_dump($_GET['url']);
     // var_dump("./views/{$_GET['url']}.php");
 
+    //Affichage et chargement de la page demandée
     if (!isset($_GET['url'])) {
         require "./views/accueil.php";
     }
