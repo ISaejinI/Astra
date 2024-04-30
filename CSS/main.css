@@ -268,5 +268,9 @@ main {
 .box-form input[type=file]::file-selector-button:hover {
   background-color: #453287;
 }
+.box-form input[type=submit] {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /*# sourceMappingURL=main.css.map */
