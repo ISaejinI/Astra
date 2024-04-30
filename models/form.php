@@ -19,7 +19,7 @@ var_dump($_POST);
 $reqenv = "INSERT INTO `planet-environnement` (idPlanet, idEnvironnement) VALUES (?,?)";
 $reqpop = "INSERT INTO `planet-population` (idPlanet, idPopulation) VALUES (?,?)";
 $reqplanet = "INSERT INTO planets (name, idUser, taille, idGalaxie, description, urlImg, habitable, climat) VALUES (:planetName,:planetUser,:planetSize,:planetGalaxie,:planetDesc,:planetImg,:planetHab,:planetClimat)";
-$reqhab = "UPDATE planet SET `nbHab=:planetHabs` WHERE `id=:idPlanet`";
+$reqhab = "UPDATE planet SET `nbHab=:planetHabs` WHERE id=:idPlanet";
 
 
 //Tableau de toutes les données à fournir quand on ajoute la table
