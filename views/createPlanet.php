@@ -55,7 +55,7 @@
                 <input type="radio" id="non" name="habitable" value="FALSE">
             </fieldset>
             <fieldset>
-                <label for="taille">Nombre d'habitants <span>*</span></label>
+                <label for="nbhab">Nombre d'habitants <span>*</span></label>
                 <input type="number" name="nbhab" id="nbhab" required>
 
                 <p>Population <span style="font-size: 0.6em;">(par qui est peuplé la planète)</span></p>
