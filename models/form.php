@@ -13,14 +13,13 @@ move_uploaded_file($_FILES['img']['tmp_name'], $upfile);
 
 var_dump($_POST);
 
-exit;
 
 
 //Toutes les requêtes et les variables
-$reqenv = "INSERT INTO planet-environnement (idPlanet, idEnvironnement) VALUES (?,?)";
-$reqpop = "INSERT INTO planet-population (idPlanet, idPopulation) VALUES (?,?)";
+$reqenv = "INSERT INTO `planet-environnement` (idPlanet, idEnvironnement) VALUES (?,?)";
+$reqpop = "INSERT INTO `planet-population` (idPlanet, idPopulation) VALUES (?,?)";
 $reqplanet = "INSERT INTO planets (name, idUser, taille, idGalaxie, description, urlImg, habitable, climat) VALUES (:planetName,:planetUser,:planetSize,:planetGalaxie,:planetDesc,:planetImg,:planetHab,:planetClimat)";
-$reqhab = "UPDATE planet SET nbHab=:planetHabs WHERE id=:idPlanet";
+$reqhab = "UPDATE planet SET `nbHab=:planetHabs` WHERE `id=:idPlanet`";
 
 
 //Tableau de toutes les données à fournir quand on ajoute la table
@@ -54,7 +53,7 @@ if (!(isset($_POST['name']) && isset($_POST['taille']) && isset($_POST['galaxie'
 else {
     //Sinon exécution de la requête sans les champs nombre d'habitants et 
     $planet = $dbAstra->prepare($reqplanet);
-    $planet->execute(array($infos));
+    $planet->execute($infos);
 
     //Définition de l'id de la planète
     $planetId = $dbAstra->lastInsertId();
@@ -77,7 +76,7 @@ else {
             ];
 
             $update = $dbAstra->prepare($reqhab);
-            $update->execute(array($infos2));
+            $update->execute($infos2);
             
             pivot($_POST['pop'], $reqpop, $dbAstra, $planetId);
         }

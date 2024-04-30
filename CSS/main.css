@@ -223,14 +223,34 @@ main {
 
 /* -- CRÉATION DE PLANETE -- */
 .box-form {
+  margin-left: auto;
+  margin-right: auto;
   background-color: #F5F5F5;
   color: #141414;
+  max-width: 1150px;
 }
-.box-form p {
+.box-form h1 {
   color: #453287;
+  text-align: center;
 }
-.box-form label span {
+.box-form span {
   color: #F5B849;
+}
+.box-form input[type=file] {
+  color: #141414;
+  padding: 8px 12px;
+  background-color: white;
+  border: 1px solid #141414;
+}
+.box-form input[type=file]::file-selector-button {
+  margin-right: 8px;
+  border: none;
+  background-color: #9678F5;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.box-form input[type=file]::file-selector-button:hover {
+  background-color: #453287;
 }
 
 /*# sourceMappingURL=main.css.map */
