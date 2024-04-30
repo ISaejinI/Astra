@@ -20,3 +20,17 @@ a {
         color: $light-yellow;
     }
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+    &-thumb {
+        background-color: $dark-yellow;
+
+        &:hover {
+            background-color: $light-yellow;
+        }
+    }
+    &-track {
+        background-color: $black;
+    }
+}
