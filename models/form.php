@@ -1,7 +1,4 @@
 <?php
-//Traiter l'image envoyée
-var_dump($_FILES);
-
 //Changer le nom de l'image envoyée
 $imgname = date("YmdHis") . ".png";
 
@@ -11,16 +8,10 @@ $upfile = $stockage . $imgname;
 var_dump($upfile);
 move_uploaded_file($_FILES['img']['tmp_name'], $upfile);
 
-var_dump($_POST);
-
-
-
 //Toutes les requêtes et les variables
 $reqenv = "INSERT INTO `planet-environnement` (idPlanet, idEnvironnement) VALUES (?,?)";
 $reqpop = "INSERT INTO `planet-population` (idPlanet, idPopulation) VALUES (?,?)";
 $reqplanet = "INSERT INTO planets (name, idUser, taille, idGalaxie, description, urlImg, habitable, climat) VALUES (:planetName,:planetUser,:planetSize,:planetGalaxie,:planetDesc,:planetImg,:planetHab,:planetClimat)";
-$reqhab = "UPDATE planet SET `nbHab=:planetHabs` WHERE id=:idPlanet";
-
 
 //Tableau de toutes les données à fournir quand on ajoute la table
 $infos = [
@@ -34,7 +25,6 @@ $infos = [
     ':planetClimat' => $_POST['climat']
 ];
 
-
 //Fonction d'insertion dans les tables pivots
 function pivot($info, $requete, $db, $idplanet)
 {
@@ -43,7 +33,6 @@ function pivot($info, $requete, $db, $idplanet)
         $piv->execute(array($idplanet, $k));
     }
 }
-
 
 //Si tous les champs ne sont pas remplis on sort de la fonction
 if (!(isset($_POST['name']) && isset($_POST['taille']) && isset($_POST['galaxie']) && isset($_POST['env']) && isset($_POST['desc']) && isset($_POST['habitable']))) {
@@ -72,15 +61,15 @@ else {
         } else {
             $infos2 = [
                 ':planetHabs' => $_POST['nbhab'],
-                ':idPlanet' => $planetId,
+                ':idPlanet' => $planetId
             ];
 
+            $nbHabs = $_POST['nbhab'];
+            $reqhab = "UPDATE planets SET nbHab = $nbHabs WHERE id = $planetId";
             $update = $dbAstra->prepare($reqhab);
-            $update->execute($infos2);
+            $update->execute();
             
             pivot($_POST['pop'], $reqpop, $dbAstra, $planetId);
         }
     }
-
-
 }
