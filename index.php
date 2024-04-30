@@ -13,9 +13,6 @@
     //Affichage des pages
     require './template/header.php';
 
-    // var_dump($_GET['url']);
-    // var_dump("./views/{$_GET['url']}.php");
-
     //Affichage et chargement de la page demandée
     if (!isset($_GET['url'])) {
         require "./views/accueil.php";
