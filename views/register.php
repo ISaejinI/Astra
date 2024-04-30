@@ -15,7 +15,7 @@
         }
         ?>
 
-        <form action="../models/users.php" method="post">
+        <form method="post">
             <div class="log-inp">
                 <span>
                     <i class='bx bxs-user'></i>
