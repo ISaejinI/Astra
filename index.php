@@ -1,7 +1,7 @@
 <?php
     //Le début de tout
     session_start();
-    require "./models/config.php";
+    require "./config.php";
     global $dbAstra;
 
 
