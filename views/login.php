@@ -14,7 +14,7 @@
             echo '<span class="error">' . $_SESSION["error"] . '</span>';
         }
         ?>
-        <form action="../models/users.php" method="post">
+        <form method="post">
             <div class="log-inp">
                 <span>
                     <i class='bx bxs-envelope'></i>
@@ -27,6 +27,8 @@
                 </span>
                 <input type="password" name="logpwd" id="logpwd" required placeholder="Mot de passe">
             </div>
+
+            <input type="hidden" name="login">
             <br>
 
             <input type="submit" value="Connexion" class="bu-head">

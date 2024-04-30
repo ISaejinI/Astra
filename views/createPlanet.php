@@ -92,6 +92,7 @@
                 </div>
 
             </fieldset>
+            <input type="hidden" name="create">
             <input type="submit" value="Valider" class="bu-head">
         </form>
 

@@ -5,8 +5,10 @@
     global $dbAstra;
 
 
-    if (!empty($_POST)) {
+    if (isset($_POST['create'])) {
         require "./models/form.php";
+    } elseif (isset($_POST['login'])) {
+        require "./models/users.php";
     }
 
 

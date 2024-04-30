@@ -34,6 +34,7 @@
                 </span>
                 <input type="password" name="pwd" id="pwd" required placeholder="Mot de passe *">
             </div>
+            <input type="hidden" name="login">
             <br>
 
             <input type="submit" value="Inscription" class="bu-head">
