@@ -43,7 +43,7 @@ a:hover {
   font-size: 2em;
 }
 
-body {
+body, input, textarea, select {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -51,11 +51,19 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
-h1, .montserrat {
+h1, h2, .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+h1 {
+  font-size: 54.9px;
+}
+
+h2 {
+  font-size: 43.9px;
 }
 
 .bu-head {
@@ -246,10 +254,38 @@ main {
   margin: 1.5em auto 0 auto;
   background-color: #F5F5F5;
   color: #141414;
-  max-width: 1150px;
-  padding: 0.5em 2em;
+  max-width: 1050px;
+  padding: 0.5em 3em 2em 3em;
+  border-radius: 35px;
 }
-.box-form h1 {
+.box-form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.7em;
+}
+.box-form div input, .box-form div textarea, .box-form div select {
+  margin-top: 0.3em;
+  background-color: white;
+  border: none;
+  border: 1px solid rgba(20, 20, 20, 0.5019607843);
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  border-radius: 10px;
+  max-width: fit-content;
+}
+.box-form div input:focus, .box-form div textarea:focus, .box-form div select:focus {
+  border: none;
+  border: 2px solid #9678F5;
+  outline: none;
+}
+.box-form .checkElmt {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.box-form .checkElmt div {
+  display: flex;
+  flex-direction: row;
+}
+.box-form h2 {
   color: #453287;
   text-align: center;
 }
@@ -260,7 +296,7 @@ main {
   color: #141414;
   padding: 8px 12px;
   background-color: white;
-  border: 1px solid #141414;
+  border: 1px solid rgba(20, 20, 20, 0.5019607843);
 }
 .box-form input[type=file]::file-selector-button {
   margin-right: 8px;
@@ -268,6 +304,7 @@ main {
   background-color: #9678F5;
   padding: 8px 12px;
   cursor: pointer;
+  border-radius: 10px;
 }
 .box-form input[type=file]::file-selector-button:hover {
   background-color: #453287;

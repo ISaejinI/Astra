@@ -5,7 +5,7 @@
     font-size: 2em;
 }
 
-body {
+body, input, textarea, select {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -13,9 +13,17 @@ body {
     font-variation-settings: "wdth" 100;
 }
 
-h1, .montserrat {
+h1, h2, .montserrat {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+h1 {
+    font-size: 54.9px;
+}
+
+h2 {
+    font-size: 43.9px;
 }

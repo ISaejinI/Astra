@@ -223,10 +223,43 @@ main {
     margin: 1.5em auto 0 auto;
     background-color: $white;
     color: $black;
-    max-width: 1150px;
-    padding: 0.5em 2em;
+    max-width: 1050px;
+    padding: 0.5em 3em 2em 3em;
+    border-radius: 35px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.7em;
+
+        input, textarea, select {
+            margin-top: 0.3em;
+            background-color: white;
+            border: none;
+            border: 1px solid $black-op;
+            padding: 0.5em 1.5em 0.5em 1.5em;
+            border-radius: 10px;
+            max-width: fit-content;
+
+            &:focus {
+                border: none;
+                border: 2px solid $light-purple;
+                outline: none; 
+            }
+        }
+    }
+
+    .checkElmt {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        div {
+            display: flex;
+            flex-direction: row;
+        }
+    }
     
-    h1 {
+    h2 {
         color: $dark-purple;
         text-align: center;
     }
@@ -239,7 +272,7 @@ main {
         color: $black;
         padding: 8px 12px;
         background-color: white;
-        border: 1px solid $black;
+        border: 1px solid $black-op;       
 
         &::file-selector-button{
             margin-right: 8px;
@@ -247,6 +280,7 @@ main {
             background-color: $light-purple;
             padding: 8px 12px;
             cursor: pointer;
+            border-radius: 10px;
 
             &:hover {
                 background-color: $dark-purple;
