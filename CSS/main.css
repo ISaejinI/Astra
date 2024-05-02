@@ -315,4 +315,26 @@ main {
   margin-right: auto;
 }
 
+/* -- AFFICHAGE PLANETE -- */
+#oneplanet {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  margin-top: 4em;
+}
+
+#visu {
+  margin-left: auto;
+  margin-right: auto;
+}
+#visu img {
+  max-width: 700px;
+  position: relative;
+}
+#visu h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /*# sourceMappingURL=main.css.map */
