@@ -1,6 +1,7 @@
 <?php 
 
-$req = 'SELECT * FROM planets WHERE id=?';
+$req = 'SELECT planets.*, galaxies.name AS galaxy_name FROM planets JOIN galaxies ON planets.idGalaxie=galaxies.id WHERE planets.id=?';
+
 $reqenv = 'SELECT name FROM environnements JOIN `planet-environnement` ON idEnvironnement=environnements.id WHERE idPlanet=?';
 $reqpop = 'SELECT name FROM populations JOIN `planet-population` ON idPopulation=populations.id WHERE idPlanet=?';
 
