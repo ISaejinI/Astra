@@ -111,7 +111,7 @@ footer {
 /* -- AFFICHAGE TOUTES LES PLANETES -- */
 
 #all-planets {
-    
+    //en cours de réfléxion
 }
 
 main {
@@ -250,6 +250,7 @@ main {
 
             &:hover {
                 background-color: $dark-purple;
+                color: white;
             }
         }
     }
