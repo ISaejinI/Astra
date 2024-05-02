@@ -243,11 +243,11 @@ main {
 
 /* -- CRÉATION DE PLANETE -- */
 .box-form {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1.5em auto 0 auto;
   background-color: #F5F5F5;
   color: #141414;
   max-width: 1150px;
+  padding: 0.5em 2em;
 }
 .box-form h1 {
   color: #453287;
