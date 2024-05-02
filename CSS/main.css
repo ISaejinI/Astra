@@ -51,7 +51,7 @@ body, input, textarea, select {
   font-variation-settings: "wdth" 100;
 }
 
-h1, h2, .montserrat {
+h1, h2, h4, .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -64,6 +64,10 @@ h1 {
 
 h2 {
   font-size: 43.9px;
+}
+
+h4 {
+  font-size: 28.1px;
 }
 
 .bu-head {
@@ -319,7 +323,20 @@ main {
 #oneplanet {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
-  margin-top: 4em;
+}
+#oneplanet h4 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#desc {
+  padding-left: 3em;
+  padding-top: 6em;
+}
+
+#planetName {
+  font-size: 90px;
+  font-weight: 900;
 }
 
 #visu {
@@ -332,9 +349,17 @@ main {
 }
 #visu h1 {
   position: absolute;
-  top: 50%;
+  bottom: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin: auto 0;
+  padding: 0;
+}
+
+#infos {
+  padding-right: 3em;
+  text-align: end;
+  padding-top: 6em;
 }
 
 /*# sourceMappingURL=main.css.map */

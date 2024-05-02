@@ -13,8 +13,20 @@ $env->execute(array($_GET['id']));
 $envts = $env->fetchAll();
 ?>
 
+<style>
+    body {
+        background-image: url(/src/Sky-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+    }
+</style>
+
 <section id="oneplanet">
     <div id="desc">
+        <h4>Galaxie</h4>
+        <p><?php echo $laplanete['galaxy_name'] ?></p>
+
         <h4>Description</h4>
         <p><?php echo $laplanete['description'] ?></p>
     </div>
@@ -25,9 +37,6 @@ $envts = $env->fetchAll();
     </div>
 
     <div id="infos">
-        <h4>Galaxie</h4>
-        <p><?php echo $laplanete['galaxy_name'] ?></p>
-
         <h4>Taille</h4>
         <p><?php echo $laplanete['taille'] ?> km de diamètre</p>
 
@@ -66,8 +75,6 @@ $envts = $env->fetchAll();
 
     </div>
 
-
-</section>
     <?php
     if (is_null($laplanete['idUser'])) {
         echo "";
@@ -84,3 +91,4 @@ $envts = $env->fetchAll();
         // echo "</pre>"; 
     }
     ?>
+</section>
