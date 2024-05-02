@@ -57,7 +57,7 @@ $envts = $env->fetchAll();
             echo "<h4>Population</h4>";
             echo "<p>La planète n'est aps habitable</p>";
         } else {
-            echo "<h4>Nopmbre d'habitants</h4>";
+            echo "<h4>Nombre d'habitants</h4>";
             echo "<p>" . $laplanete['nbHab'] . "</p>";
 
             $pop = $dbAstra->prepare($reqpop);
