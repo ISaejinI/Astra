@@ -8,6 +8,8 @@
         require "./models/form.php";
     } elseif (isset($_POST['login'])) {
         require "./models/users.php";
+    } elseif (isset($_POST['addGalaxy'])) {
+        require "./models/addGalaxy.php";
     }
 
     //Affichage des pages

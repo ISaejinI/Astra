@@ -110,8 +110,8 @@
     <!-- Modale d'ajout de galaxie -->
     <div id="addGalaxy" style="display: none;">
         <form action="" method="post">
-            <input type="text" placeholder="Nom de la galaxie">
-            <input type="hidden" name="galaxy">
+            <input type="text" name="galaxyName" placeholder="Nom de la galaxie">
+            <input type="hidden" name="addGalaxy">
             <input type="submit" value="Ajouter" class="bu-head">
         </form>
     </div>
