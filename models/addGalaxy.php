@@ -6,6 +6,9 @@ if (isset($_POST['galaxyName'])) {
     $galaxie->execute(array($_POST['galaxyName']));
 
     $_SESSION['successGalaxie'] = 'Galaxie ajoutée';
+    unset($_POST['galaxyName']);
+    header('Location: /createPlanet/');
+    exit;
 }
 else {
     $_SESSION['errorGalaxie'] = 'Veuillez saisir un nom de galaxie';

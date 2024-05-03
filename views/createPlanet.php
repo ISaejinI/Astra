@@ -119,5 +119,13 @@
         const buGa = document.getElementById('buAddGalaxy')
         const modGa = document.getElementById('addGalaxy')
         buGa.addEventListener('click', () => modGa.style.display = "block")
+
+        modGa.querySelector('form').addEventListener('submit', function(e){
+            e.preventDefault();
+
+            // requete ajax
+
+            // mise à jour du selecteur
+        })
     </script>
 </section>
