@@ -20,7 +20,7 @@
             </div>
 
             <div>
-                <label for="galaxie">Système solaire <span>*</span></label>
+                <label for="galaxie">Galaxie <span>*</span></label>
                 <select name="galaxie" id="galaxie">
                     <option value="">-------</option>
                     <?php
@@ -34,6 +34,7 @@
 
                     ?>
                 </select>
+                <span id="buAddGalaxy" style="cursor: pointer;"><i class='bx bx-plus'></i> Ajouter une nouvelle galaxie</span>
             </div>
 
             <div>
@@ -103,7 +104,20 @@
             <input type="hidden" name="create">
             <input type="submit" value="Valider" class="bu-head">
         </form>
-
-
     </div>
+
+
+    <!-- Modale d'ajout de galaxie -->
+    <div id="addGalaxy" style="display: none;">
+        <form action="" method="post">
+            <input type="text" placeholder="Nom de la galaxie">
+            <input type="hidden" name="galaxy">
+            <input type="submit" value="Ajouter" class="bu-head">
+        </form>
+    </div>
+    <script>
+        const buGa = document.getElementById('buAddGalaxy')
+        const modGa = document.getElementById('addGalaxy')
+        buGa.addEventListener('click', () => modGa.style.display = "block")
+    </script>
 </section>

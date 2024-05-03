@@ -273,7 +273,9 @@ main {
   flex-direction: column;
   margin-bottom: 0.7em;
 }
-.box-form div input, .box-form div textarea, .box-form div select {
+.box-form div input,
+.box-form div textarea,
+.box-form div select {
   margin-top: 0.3em;
   background-color: white;
   border: none;
@@ -282,10 +284,15 @@ main {
   border-radius: 10px;
   max-width: fit-content;
 }
-.box-form div input:focus, .box-form div textarea:focus, .box-form div select:focus {
+.box-form div input:focus,
+.box-form div textarea:focus,
+.box-form div select:focus {
   border: none;
   border: 2px solid #9678F5;
   outline: none;
+}
+.box-form #buAddGalaxy {
+  position: relative;
 }
 .box-form .checkElmt {
   display: grid;
@@ -320,9 +327,25 @@ main {
   background-color: #453287;
   color: white;
 }
-.box-form input[type=submit] {
-  margin-left: auto;
-  margin-right: auto;
+
+#addGalaxy {
+  position: absolute;
+  top: 390px;
+  left: 37%;
+}
+#addGalaxy input[type=text] {
+  margin-top: 0.3em;
+  background-color: white;
+  border: none;
+  border: 1px solid rgba(20, 20, 20, 0.5019607843);
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  border-radius: 10px;
+  max-width: fit-content;
+}
+#addGalaxy input[type=text]:focus {
+  border: none;
+  border: 2px solid #9678F5;
+  outline: none;
 }
 
 /* -- AFFICHAGE PLANETE -- */

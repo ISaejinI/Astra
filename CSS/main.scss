@@ -235,7 +235,9 @@ main {
         flex-direction: column;
         margin-bottom: 0.7em;
 
-        input, textarea, select {
+        input,
+        textarea,
+        select {
             margin-top: 0.3em;
             background-color: white;
             border: none;
@@ -247,9 +249,13 @@ main {
             &:focus {
                 border: none;
                 border: 2px solid $light-purple;
-                outline: none; 
+                outline: none;
             }
         }
+    }
+
+    #buAddGalaxy {
+        position: relative;
     }
 
     .checkElmt {
@@ -261,7 +267,7 @@ main {
             flex-direction: row;
         }
     }
-    
+
     h2 {
         color: $dark-purple;
         text-align: center;
@@ -275,9 +281,9 @@ main {
         color: $black;
         padding: 8px 12px;
         background-color: white;
-        border: 1px solid $black-op;       
+        border: 1px solid $black-op;
 
-        &::file-selector-button{
+        &::file-selector-button {
             margin-right: 8px;
             border: none;
             background-color: $light-purple;
@@ -291,10 +297,27 @@ main {
             }
         }
     }
+}
 
-    input[type=submit] {
-        margin-left: auto;
-        margin-right: auto;
+#addGalaxy {
+    position: absolute;
+    top: 390px;
+    left: 37%;
+
+    input[type=text] {
+        margin-top: 0.3em;
+        background-color: white;
+        border: none;
+        border: 1px solid $black-op;
+        padding: 0.5em 1.5em 0.5em 1.5em;
+        border-radius: 10px;
+        max-width: fit-content;
+
+        &:focus {
+            border: none;
+            border: 2px solid $light-purple;
+            outline: none;
+        }
     }
 }
 
@@ -303,10 +326,11 @@ main {
 #oneplanet {
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
+
     li {
         list-style: none;
     }
-    
+
     // margin-top: 4em;
 
     h4 {
@@ -328,7 +352,7 @@ main {
 #visu {
     margin-left: auto;
     margin-right: auto;
-    
+
     img {
         max-width: 700px;
         position: relative;
