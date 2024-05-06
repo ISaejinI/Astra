@@ -37,13 +37,12 @@ function login($mail, $pwd)
             //Le couple mdp et mail est OK
             $_SESSION["id"] = $line['id'];
             echo $_SESSION["id"];
-            header("Location: /accueil/");
+            header("Location: accueil/");
+            exit;
             
         } else {
             $_SESSION["error"] = "Mot de passe incorrect";
             echo $_SESSION["error"];
-            header("Location: /login/");
-            
         }
     }
 };
@@ -70,15 +69,13 @@ function register($username, $email, $passwd) {
         $_SESSION['error'] = "Compte créé";
         $_SESSION['id'] = $dbAstra -> lastInsertId();
 
-        header("Location: /accueil/");
-        
+        header("Location: accueil/");
+        exit;
 
 
     } else {
         //compte déjà existant
         $_SESSION['error'] = "Un compte existe déjà pour cette adresse mail";
-        header("Location: /register/");
-        
     }
 }
 

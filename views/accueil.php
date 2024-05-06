@@ -1,5 +1,5 @@
 <section id="planet">
-    <img src="../src/Planet1.png" alt="">
+    <img src="src/Planet1.png" alt="">
     <p class="montserrat">Concevez, et donnez vie à vos propres planètes !</p>
 </section>
 
@@ -16,8 +16,8 @@
 
                     while ($line = $planets->fetch()) {
                         echo '<div class="swiper-slide">
-                                <a href="/planet/'.$line['id'].'/">
-                                    <img src="../src/' . $line["urlImg"] . '" alt="">
+                                <a href="planet/'.$line['id'].'/">
+                                    <img src="src/' . $line["urlImg"] . '" alt="">
                                     <p>' . $line["name"] . '</p>
                                 </a>
                             </div>';
@@ -40,14 +40,6 @@
                 autoplay: {
                     delay: 4000,
                 },
-                // breakpoints: {
-                //     640: {
-                //         slidesPerView: 1,
-                //     },
-                //     1100: {
-                //         slidesPerView: 3,
-                //     },
-                // },
             });
         </script>
     </div>
