@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astra</title>
+    <link rel="shortcut icon" href="src/astra-logo.png" type="image/png">
     <base href="<?= BASE_URL ?>">
     <link rel="stylesheet" href="CSS/main.css"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
