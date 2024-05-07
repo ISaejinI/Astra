@@ -13,8 +13,8 @@
 
             while ($line = $planets->fetch()) {
                 echo '<div class="one-planet">
-                        <a href="/planet/'.$line['id'].'/">
-                            <img src="../src/' . $line["urlImg"] . '" alt="">
+                        <a href="planet/'.$line['id'].'/">
+                            <img src="src/' . $line["urlImg"] . '" alt="">
                             <p>' . $line["name"] . '</p>
                         </a>
                       </div>';
