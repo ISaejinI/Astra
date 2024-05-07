@@ -48,12 +48,12 @@ footer {
 
 #planet {
     background-image: $bg-image;
+    background-size: cover;
     display: flex;
     align-items: center;
 
     img {
         max-width: 55%;
-        object-fit: contain;
     }
 
     p {

@@ -114,13 +114,13 @@ footer .logo {
 
 /* -- SECTION PLANET --*/
 #planet {
-  background-image: url("/src/Sky-bg.jpg");
+  background-image: url("/Astra/src/Sky-bg.jpg");
+  background-size: cover;
   display: flex;
   align-items: center;
 }
 #planet img {
   max-width: 55%;
-  object-fit: contain;
 }
 #planet p {
   font-size: 4rem;
