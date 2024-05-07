@@ -2,7 +2,7 @@
     <div class="box-form">
         <h2>Créer une nouvelle planète</h2>
 
-        <form action="" method="post" enctype="multipart/form-data">
+        <form method="post" enctype="multipart/form-data">
 
             <div>
                 <label for="name">Nom de la planète <span>*</span></label>

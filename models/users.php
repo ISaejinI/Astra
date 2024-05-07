@@ -28,21 +28,18 @@ function login($mail, $pwd)
 
     if ($line === false) {
         $_SESSION['error'] = "Aucun compte existant à cette adresse";
-        header("Location: /login/");
-        echo $_SESSION["error"];
-
+        //Pas besoin de redirection puisqu'on reste sur la même page
     } else {
         //Un compte existe avec ce mail
         if ($line['password'] == sha1($pwd)) {
             //Le couple mdp et mail est OK
             $_SESSION["id"] = $line['id'];
             echo $_SESSION["id"];
-            header("Location: accueil/");
+            header("Location: /accueil/");
             exit;
             
         } else {
             $_SESSION["error"] = "Mot de passe incorrect";
-            echo $_SESSION["error"];
         }
     }
 };

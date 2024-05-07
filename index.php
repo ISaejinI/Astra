@@ -20,7 +20,7 @@
         require "./views/accueil.php";
     }
     else {
-        require "./views/{$_GET['url']}.php";
+        require "views/{$_GET['url']}.php";
     }
 
     require './template/footer.html';

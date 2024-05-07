@@ -259,6 +259,10 @@ main {
   background-color: #F5F5F5;
 }
 
+.error {
+  color: #F5B849;
+}
+
 /* -- CRÉATION DE PLANETE -- */
 .box-form {
   margin: 1.5em auto 0 auto;
