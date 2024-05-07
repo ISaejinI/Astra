@@ -11,9 +11,8 @@
         require "./models/users.php";
     } elseif (isset($_POST['addGalaxy'])) {
         require "./models/addGalaxy.php";
-    } elseif (isset($_POST['test'])) {
-        var_dump($_POST);
-        exit;
+    } elseif (isset($_POST['logout'])) {
+        require "./controllers/logout.php";
     }
     
     //Affichage des pages

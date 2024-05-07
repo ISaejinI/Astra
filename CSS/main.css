@@ -80,6 +80,11 @@ h4 {
   color: #453287;
 }
 
+#deco {
+  color: #F5F5F5;
+  font-size: 1em;
+}
+
 /* -- HEADER -- */
 header {
   background-image: linear-gradient(to right bottom, #9678f5, #8166d8, #6d54bc, #5943a1, #453287);

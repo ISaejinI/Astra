@@ -22,11 +22,15 @@
             <?php
             if (isset($_SESSION['id'])) { ?>
                 <a href="createPlanet/">Créer une planète</a>
-                <a href="controllers/logout.php" class="bu-head">Déconnexion</a>
-            <?php } else {
-                echo '<a href="login/">Connexion</a>
-                      <a href="register/" class="bu-head">Inscription</a>';
-            }
+                <form method="post">
+                    <input type="hidden" name="logout">
+                    <input type="submit" value="Déconnexion" id="deco" class="bu-head">
+                </form>
+
+            <?php } else { ?>
+                <a href="login/">Connexion</a>
+                <a href="register/" class="bu-head">Inscription</a>';
+            <?php }
             ?>
         </nav>
     </header>
