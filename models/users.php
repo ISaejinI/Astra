@@ -35,7 +35,7 @@ function login($mail, $pwd)
             //Le couple mdp et mail est OK
             $_SESSION["id"] = $line['id'];
             echo $_SESSION["id"];
-            header("Location: accueil/");
+            header('Location: '.BASE_URL.'accueil/');
             exit;
             
         } else {
@@ -51,9 +51,9 @@ function register($username, $email, $passwd) {
             //Si non -> créer compte
             //Si oui -> dire que déjà un compte existe
     
-    $req = 'SELECT * FROM users WHERE email=?';
+    $req = 'SELECT * FROM users WHERE email=? OR username=?';
     $users = $dbAstra->prepare($req);
-    $users->execute(array($email));
+    $users->execute(array($email, $username));
     $line = $users->fetch();
 
     if ($line === false) {
@@ -66,13 +66,13 @@ function register($username, $email, $passwd) {
         $_SESSION['error'] = "Compte créé";
         $_SESSION['id'] = $dbAstra -> lastInsertId();
 
-        header("Location: accueil/");
+        header('Location: '.BASE_URL.'accueil/');
         exit;
 
 
     } else {
         //compte déjà existant
-        $_SESSION['error'] = "Un compte existe déjà pour cette adresse mail";
+        $_SESSION['error'] = "Email ou nom d'utilisateur déjà pris";
     }
 }
 
