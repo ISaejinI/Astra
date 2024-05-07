@@ -130,7 +130,7 @@
                 body: formulaire
             });
             const galaxie = await reponse.json();
-            
+
             const selectgalaxie = document.getElementById("galaxie")
 
             let galaxieoption = document.createElement("option")
@@ -160,9 +160,6 @@
             //     selectgalaxie.append(galaxieoption)
 
             // })
-            // requete ajax
-
-            // mise à jour du selecteur
         })
     </script>
 </section>
