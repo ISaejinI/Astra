@@ -136,13 +136,12 @@
             let galaxieoption = document.createElement("option")
             galaxieoption.innerHTML = galaxie.galaxieInfo.name
             galaxieoption.value = galaxie.galaxieInfo.id
-
             selectgalaxie.append(galaxieoption)
+            //OU
+            //document.getElementById("galaxie").append(`<option id="${galaxie.galaxieInfo.id}">${galaxie.galaxieInfo.name}</option>`)
 
 
-
-
-
+            //fonctionnement syncrone
             // fetch(window.location.href, {
             //     method : "POST",
             //     body : formulaire
