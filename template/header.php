@@ -29,7 +29,7 @@
 
             <?php } else { ?>
                 <a href="login/">Connexion</a>
-                <a href="register/" class="bu-head">Inscription</a>';
+                <a href="register/" class="bu-head">Inscription</a>
             <?php }
             ?>
         </nav>
