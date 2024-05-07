@@ -15,7 +15,7 @@ $envts = $env->fetchAll();
 
 <style>
     body {
-        background-image: url(/src/Sky-bg.jpg);
+        background-image: url('/Astra/src/Sky-bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         height: 100%;
@@ -32,7 +32,7 @@ $envts = $env->fetchAll();
     </div>
 
     <div id="visu">
-        <img src="/src/<?php echo $laplanete['urlImg'] ?>" alt="">
+        <img src="src/<?php echo $laplanete['urlImg'] ?>" alt="">
         <h1 id="planetName"><?php echo $laplanete['name'] ?></h1>
     </div>
 
