@@ -4,6 +4,9 @@
     require "./config.php";
     global $dbAstra;
 
+    //Affichage des pages
+    require './template/header.php';
+
     if (isset($_POST['create'])) {
         require "./models/form.php";
     } elseif (isset($_POST['login'])) {
@@ -11,9 +14,6 @@
     } elseif (isset($_POST['addGalaxy'])) {
         require "./models/addGalaxy.php";
     }
-
-    //Affichage des pages
-    require './template/header.php';
 
     //Affichage et chargement de la page demandée
     if (!isset($_GET['url'])) {

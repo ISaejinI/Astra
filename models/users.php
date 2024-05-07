@@ -35,7 +35,7 @@ function login($mail, $pwd)
             //Le couple mdp et mail est OK
             $_SESSION["id"] = $line['id'];
             echo $_SESSION["id"];
-            header("Location: /Astra/accueil/");
+            header("Location: accueil/");
             exit;
             
         } else {
