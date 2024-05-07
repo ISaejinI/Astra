@@ -20,10 +20,10 @@
         <nav>
             <a href="planets/">Explorer les planètes</a>
             <?php
-            if (isset($_SESSION['id'])) {
-                echo '<a href="createPlanet/">Créer une planète</a>
-                <a href="controllers/logout.php" class="bu-head">Déconnexion</a>';
-            } else {
+            if (isset($_SESSION['id'])) { ?>
+                <a href="createPlanet/">Créer une planète</a>
+                <a href="controllers/logout.php" class="bu-head">Déconnexion</a>
+            <?php } else {
                 echo '<a href="login/">Connexion</a>
                       <a href="register/" class="bu-head">Inscription</a>';
             }

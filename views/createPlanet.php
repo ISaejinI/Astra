@@ -78,7 +78,6 @@
                 </div>
             </div>
 
-
             <div>
                 <label for="nbhab">Nombre d'habitants <span>*</span></label>
                 <input type="number" name="nbhab" id="nbhab" required>
@@ -120,9 +119,47 @@
         const modGa = document.getElementById('addGalaxy')
         buGa.addEventListener('click', () => modGa.style.display = "block")
 
-        modGa.querySelector('form').addEventListener('submit', function(e){
+        modGa.querySelector('form').addEventListener('submit', async function(e) {
             e.preventDefault();
+            let formulaire = new FormData(this)
 
+            //Fonctionnement avec le asyncrone
+            //Asyncrone : attends d'avoir la réponse à la ligne avant de passer à la suivante
+            const reponse = await fetch(window.location.href, {
+                method: "POST",
+                body: formulaire
+            });
+            const galaxie = await reponse.json();
+            
+            const selectgalaxie = document.getElementById("galaxie")
+
+            let galaxieoption = document.createElement("option")
+            galaxieoption.innerHTML = galaxie.galaxieInfo.name
+            galaxieoption.value = galaxie.galaxieInfo.id
+
+            selectgalaxie.append(galaxieoption)
+
+
+
+
+
+            // fetch(window.location.href, {
+            //     method : "POST",
+            //     body : formulaire
+            // }).then((reponse)=>{
+            //     console.log(reponse)
+            //     return reponse.json()
+            // }).then((galaxie)=>{
+            //     console.log(galaxie)
+            //     const selectgalaxie = document.getElementById("galaxie")
+
+            //     let galaxieoption = document.createElement("option")
+            //     galaxieoption.innerHTML=galaxie.galaxieInfo.name
+            //     galaxieoption.value = galaxie.galaxieInfo.id
+
+            //     selectgalaxie.append(galaxieoption)
+
+            // })
             // requete ajax
 
             // mise à jour du selecteur

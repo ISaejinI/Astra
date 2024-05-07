@@ -5,11 +5,17 @@ if (isset($_POST['galaxyName'])) {
     $galaxie = $dbAstra->prepare($req);
     $galaxie->execute(array($_POST['galaxyName']));
 
-    $_SESSION['successGalaxie'] = 'Galaxie ajoutée';
-    unset($_POST['galaxyName']);
-    header('Location: /createPlanet/');
-    exit;
+    $lastid = $dbAstra->lastInsertId();
+
+    $reqlast = 'SELECT * FROM galaxies WHERE id = ?';
+    $stmt_lastgalaxie = $dbAstra->prepare($reqlast);
+    $stmt_lastgalaxie->execute(array($lastid));
+    $lastgalaxie = $stmt_lastgalaxie->fetch();
+
+    echo json_encode(["status" => "Galaxie ajoutée", "galaxieInfo" => $lastgalaxie]);
 }
 else {
     $_SESSION['errorGalaxie'] = 'Veuillez saisir un nom de galaxie';
 }
+
+exit;
