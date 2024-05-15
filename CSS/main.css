@@ -217,6 +217,37 @@ main {
   justify-content: space-between;
 }
 
+.accordion {
+  background-color: #F5F5F5;
+  color: #141414;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.accordion:after {
+  content: "➕";
+  font-size: 13px;
+  color: #141414;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "➖";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #F5F5F5;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
 /* -- CONNEXION / INSCRIPTION -- */
 .log {
   background-image: linear-gradient(to right bottom, #453287, #5943a1, #6d54bc, #8166d8, #9678f5);

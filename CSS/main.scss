@@ -161,6 +161,39 @@ main {
     }
 }
 
+.accordion {
+    background-color: $white;
+    color: $black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+
+    &:after {
+        content: "\02795";
+        font-size: 13px;
+        color: $black;
+        float: right;
+        margin-left: 5px;
+    }
+}
+
+.active:after {
+    content: "\2796";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: $white;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+
 /* -- CONNEXION / INSCRIPTION -- */
 
 .log {
