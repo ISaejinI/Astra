@@ -3,11 +3,15 @@
         <h2>Filtres</h2>
         <button class="accordion">Galaxies</button>
         <div class="panel">
-            <form action="" method="get">
+            <form action="" method="get" id="filtre">
                 <?php
                 $allGalaxies = getGalaxies();
                 foreach ($allGalaxies as $g) {
-                    echo '<input type="checkbox" id="' . $g["name"] . '" name="galaxies" value="' . $g["name"] . '"/>';
+                    echo '<input type="radio" class="galaxyFilter" id="' . $g["name"] . '" name="galaxies" value="' . $g["id"] . '"/>'; ?>
+                    <script>
+                        console.log(document.getElementsByName('galaxies'))
+                    </script>
+                    <?php
                     echo '<label for="' . $g["name"] . '">' . $g["name"] . '</label><br>';
                 } ?>
             </form>
@@ -19,7 +23,7 @@
                 <?php
                 $allEnvironnements = getEnvironnements();
                 foreach ($allEnvironnements as $e) {
-                    echo '<input type="checkbox" id="' . $e["name"] . '" name="environnements" value="' . $e["name"] . '"/>';
+                    echo '<input type="radio" id="' . $e["name"] . '" name="environnements" value="' . $e["name"] . '"/>';
                     echo '<label for="' . $e["name"] . '">' . $e["name"] . '</label><br>';
                 } ?>
             </form>
@@ -31,7 +35,7 @@
                 <?php
                 $allPopulations = getPopulations();
                 foreach ($allPopulations as $p) {
-                    echo '<input type="checkbox" id="' . $p["name"] . '" name="populations" value="' . $p["name"] . '"/>';
+                    echo '<input type="radio" id="' . $p["name"] . '" name="populations" value="' . $p["name"] . '"/>';
                     echo '<label for="' . $p["name"] . '">' . $p["name"] . '</label><br>';
                 } ?>
             </form>
@@ -39,6 +43,7 @@
     </div>
 
     <script src="script/script.js"></script>
+    <script src="script/filtres.js"></script>
 
     <div id="planets">
         <?php
