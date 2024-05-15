@@ -31,7 +31,7 @@
                 <?php
                 $allPopulations = getPopulations();
                 foreach ($allPopulations as $p) {
-                    echo '<input type="checkbox" id="' . $p["id"] . '" name="environnements" value="' . $p["name"] . '"/>';
+                    echo '<input type="checkbox" id="' . $p["id"] . '" name="populations" value="' . $p["name"] . '"/>';
                     echo '<label for="' . $p["id"] . '">' . $p["name"] . '</label><br>';
                 } ?>
             </form>
