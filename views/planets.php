@@ -7,8 +7,8 @@
                 <?php
                 $allGalaxies = getGalaxies();
                 foreach ($allGalaxies as $g) {
-                    echo '<input type="checkbox" id="' . $g["id"] . '" name="galaxies" value="' . $g["name"] . '"/>';
-                    echo '<label for="' . $g["id"] . '">' . $g["name"] . '</label><br>';
+                    echo '<input type="checkbox" id="' . $g["name"] . '" name="galaxies" value="' . $g["name"] . '"/>';
+                    echo '<label for="' . $g["name"] . '">' . $g["name"] . '</label><br>';
                 } ?>
             </form>
         </div>
@@ -19,8 +19,8 @@
                 <?php
                 $allEnvironnements = getEnvironnements();
                 foreach ($allEnvironnements as $e) {
-                    echo '<input type="checkbox" id="' . $e["id"] . '" name="environnements" value="' . $e["name"] . '"/>';
-                    echo '<label for="' . $e["id"] . '">' . $e["name"] . '</label><br>';
+                    echo '<input type="checkbox" id="' . $e["name"] . '" name="environnements" value="' . $e["name"] . '"/>';
+                    echo '<label for="' . $e["name"] . '">' . $e["name"] . '</label><br>';
                 } ?>
             </form>
         </div>
@@ -31,8 +31,8 @@
                 <?php
                 $allPopulations = getPopulations();
                 foreach ($allPopulations as $p) {
-                    echo '<input type="checkbox" id="' . $p["id"] . '" name="populations" value="' . $p["name"] . '"/>';
-                    echo '<label for="' . $p["id"] . '">' . $p["name"] . '</label><br>';
+                    echo '<input type="checkbox" id="' . $p["name"] . '" name="populations" value="' . $p["name"] . '"/>';
+                    echo '<label for="' . $p["name"] . '">' . $p["name"] . '</label><br>';
                 } ?>
             </form>
         </div>
