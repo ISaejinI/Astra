@@ -75,6 +75,3 @@ function register($username, $email, $passwd) {
         $_SESSION['error'] = "Email ou nom d'utilisateur déjà pris";
     }
 }
-
-
-?>
