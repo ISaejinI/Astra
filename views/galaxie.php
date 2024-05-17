@@ -1,7 +1,9 @@
-$_GET['id']
-
 <section id="galaxie">
-    <h1>Andromède</h1>
+    <?php
+    $galInfos = getGalaxy($_GET['id']);
+    // var_dump($galInfos);
+    ?>
+    <h1><?= $galInfos['name'] ?></h1>
 
     <div>
         <div>
@@ -19,6 +21,18 @@ $_GET['id']
         <h1>Toutes les planètes de la galaxie</h1>
         <div class="swiper">
             <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    swiper1
+                </div>
+                <div class="swiper-slide">
+                    swiper1
+                </div>
+                <div class="swiper-slide">
+                    swiper1
+                </div>
+                <div class="swiper-slide">
+                    swiper1
+                </div>
                 <div class="swiper-slide">
                     swiper1
                 </div>
