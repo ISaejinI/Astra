@@ -35,3 +35,14 @@ function getPopulations()
 
     return $lines;
 }
+
+/* Récupère la galaxie qui correspond à l'id */
+function getGalaxy($id)
+{
+    global $dbAstra;
+    $req = 'SELECT * FROM galaxies WHERE id=?';
+    $gala = $dbAstra->prepare($req(array($id)));
+    $gala->execute();
+    $line = $gala->fetch();
+    return $line;
+}
