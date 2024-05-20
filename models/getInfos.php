@@ -40,9 +40,20 @@ function getPopulations()
 function getGalaxy($id)
 {
     global $dbAstra;
-    $req = 'SELECT * FROM galaxies WHERE id=?';
+    $req = 'SELECT name FROM galaxies WHERE id=?';
     $gala = $dbAstra->prepare($req);
     $gala->execute(array($id));
     $line = $gala->fetch();
     return $line;
+}
+
+/* Récupère toutes les planètes appartenant à la galaxie */
+function getPlanetsFromGalaxy ($id)
+{
+    global $dbAstra;
+    $req = 'SELECT name, nbHab, urlImg FROM planets WHERE idGalaxie=?';
+    $planets = $dbAstra->prepare($req);
+    $planets->execute(array($id));
+    $lines = $planets->fetchAll();
+    return $lines;
 }

@@ -1,17 +1,23 @@
 <section id="galaxie">
     <?php
     $galInfos = getGalaxy($_GET['id']);
-    // var_dump($galInfos);
+    $galPlanets = getPlanetsFromGalaxy($_GET['id']);
+
+    $nbPlanets = count($galPlanets);
+
+
+
+    $nbHabs = 16000;
     ?>
     <h1><?= $galInfos['name'] ?></h1>
 
     <div>
         <div>
-            <h2>5</h2>
+            <h2><?= $nbPlanets ?></h2>
             <p>planètes dans la galaxie</p>
         </div>
         <div>
-            <h2>16000</h2>
+            <h2><?= $nbHabs ?></h2>
             <p>habitants dans la galaxie</p>
         </div>
     </div>
