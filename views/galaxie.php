@@ -4,7 +4,7 @@
     $galPlanets = getPlanetsFromGalaxy($_GET['id']);
 
     $nbPlanets = count($galPlanets);
-    
+
     $nbHabs = getHabsNbFromGalaxy($galPlanets);
     ?>
     <h1><?= $galInfos['name'] ?></h1>
@@ -25,21 +25,14 @@
         <h1>Toutes les planètes de la galaxie</h1>
         <div class="swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    swiper1
-                </div>
-                <div class="swiper-slide">
-                    swiper1
-                </div>
-                <div class="swiper-slide">
-                    swiper1
-                </div>
-                <div class="swiper-slide">
-                    swiper1
-                </div>
-                <div class="swiper-slide">
-                    swiper1
-                </div>
+                <?php foreach ($galPlanets as $planet) { ?>
+                    <div class="swiper-slide">
+                        <a href="planet/<?= $planet['id'] ?>/">
+                            <img src="src/<?= $planet['urlImg'] ?>">
+                            <p><?= $planet['name'] ?></p>
+                        </a>
+                    </div>
+                <?php } ?>
             </div>
             <div class="swiper-button-next"><i class='bx bx-right-arrow-circle'></i></div>
             <div class="swiper-button-prev"><i class='bx bx-left-arrow-circle'></i></div>

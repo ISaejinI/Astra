@@ -51,7 +51,7 @@ function getGalaxy($id)
 function getPlanetsFromGalaxy ($id)
 {
     global $dbAstra;
-    $req = 'SELECT name, nbHab, urlImg FROM planets WHERE idGalaxie=?';
+    $req = 'SELECT name, nbHab, urlImg, id FROM planets WHERE idGalaxie=?';
     $planets = $dbAstra->prepare($req);
     $planets->execute(array($id));
     $lines = $planets->fetchAll();
