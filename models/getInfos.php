@@ -1,6 +1,6 @@
 <?php
 
-/* Récupère toutes les galaxies */
+/* ANCHOR Récupère toutes les galaxies */
 function getGalaxies()
 {
     global $dbAstra;
@@ -12,7 +12,7 @@ function getGalaxies()
     return $lines;
 }
 
-/* Récupère tous les environnements */
+/* ANCHOR Récupère tous les environnements */
 function getEnvironnements()
 {
     global $dbAstra;
@@ -24,7 +24,7 @@ function getEnvironnements()
     return $lines;
 }
 
-/* Récupère tous les types de populations */
+/* ANCHOR Récupère tous les types de populations */
 function getPopulations()
 {
     global $dbAstra;
@@ -36,7 +36,7 @@ function getPopulations()
     return $lines;
 }
 
-/* Récupère la galaxie qui correspond à l'id */
+/* ANCHOR Récupère la galaxie qui correspond à l'id */
 function getGalaxy($id)
 {
     global $dbAstra;
@@ -47,7 +47,7 @@ function getGalaxy($id)
     return $line;
 }
 
-/* Récupère toutes les planètes appartenant à la galaxie */
+/* ANCHOR Récupère toutes les planètes appartenant à la galaxie */
 function getPlanetsFromGalaxy ($id)
 {
     global $dbAstra;
@@ -56,4 +56,14 @@ function getPlanetsFromGalaxy ($id)
     $planets->execute(array($id));
     $lines = $planets->fetchAll();
     return $lines;
+}
+
+/* ANCHOR Calcule le nombre d'habitants de la galaxie */
+function getHabsNbFromGalaxy ($galaxie)
+{
+    $nbHab = 0;
+    foreach ($galaxie as $planet) {
+        $nbHab += $planet['nbHab'];
+    }
+    return $nbHab;
 }

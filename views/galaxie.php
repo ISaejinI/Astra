@@ -4,10 +4,8 @@
     $galPlanets = getPlanetsFromGalaxy($_GET['id']);
 
     $nbPlanets = count($galPlanets);
-
-
-
-    $nbHabs = 16000;
+    
+    $nbHabs = getHabsNbFromGalaxy($galPlanets);
     ?>
     <h1><?= $galInfos['name'] ?></h1>
 
