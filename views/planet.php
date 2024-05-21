@@ -1,5 +1,5 @@
 <?php
-$req = 'SELECT planets.*, galaxies.name AS galaxy_name FROM planets JOIN galaxies ON planets.idGalaxie=galaxies.id WHERE planets.id=?';
+$req = 'SELECT planets.*, galaxies.name AS galaxy_name, galaxies.id AS galaxy_id FROM planets JOIN galaxies ON planets.idGalaxie=galaxies.id WHERE planets.id=?';
 
 $reqenv = 'SELECT name FROM environnements JOIN `planet-environnement` ON idEnvironnement=environnements.id WHERE idPlanet=?';
 $reqpop = 'SELECT name FROM populations JOIN `planet-population` ON idPopulation=populations.id WHERE idPlanet=?';
@@ -15,7 +15,7 @@ $envts = $env->fetchAll();
 
 <style>
     body {
-        background-image: url('/Astra/src/Sky-bg.jpg');
+        background-image: url('/src/Sky-bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         height: 100%;
@@ -25,23 +25,23 @@ $envts = $env->fetchAll();
 <section id="oneplanet">
     <div id="desc">
         <h4>Galaxie</h4>
-        <p><?php echo $laplanete['galaxy_name'] ?></p>
+        <a href="galaxie/<?=$laplanete['galaxy_id']?>/"><?= $laplanete['galaxy_name'] ?></a>
 
         <h4>Description</h4>
-        <p><?php echo $laplanete['description'] ?></p>
+        <p><?= $laplanete['description'] ?></p>
     </div>
 
     <div id="visu">
-        <img src="src/<?php echo $laplanete['urlImg'] ?>" alt="">
-        <h1 id="planetName"><?php echo $laplanete['name'] ?></h1>
+        <img src="src/<?= $laplanete['urlImg'] ?>" alt="">
+        <h1 id="planetName"><?= $laplanete['name'] ?></h1>
     </div>
 
     <div id="infos">
         <h4>Taille</h4>
-        <p><?php echo $laplanete['taille'] ?> km de diamètre</p>
+        <p><?= $laplanete['taille'] ?> km de diamètre</p>
 
         <h4>Climat</h4>
-        <p><?php echo $laplanete['climat'] ?></p>
+        <p><?= $laplanete['climat'] ?></p>
 
         <h4>Environnement</h4>
         <ul>
