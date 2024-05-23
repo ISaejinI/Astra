@@ -1,4 +1,4 @@
-/* -- IMPORTS -- */
+/* ANCHOR -- IMPORTS -- */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Syncopate&display=swap');
 @import 'variables';
@@ -6,7 +6,7 @@
 @import 'fonts';
 @import 'buttons';
 
-/* -- HEADER -- */
+/* ANCHOR -- HEADER -- */
 
 header {
     background-image: $bg-purple-gradiant;
@@ -24,7 +24,7 @@ header {
     }
 }
 
-/* -- FOOTER -- */
+/* ANCHOR -- FOOTER -- */
 
 footer {
     background-image: $bg-purple-gradiant;
@@ -44,7 +44,7 @@ footer {
 }
 
 
-/* -- SECTION PLANET --*/
+/* ANCHOR -- SECTION PLANET --*/
 
 #planet {
     background-image: $bg-image;
@@ -65,7 +65,7 @@ footer {
     }
 }
 
-/* -- CARROUSSEL -- */
+/* ANCHOR -- CARROUSSEL -- */
 
 #swiper-box {
     margin: 4em auto;
@@ -115,7 +115,7 @@ footer {
 
 
 
-/* -- AFFICHAGE TOUTES LES PLANETES -- */
+/* ANCHOR -- AFFICHAGE TOUTES LES PLANETES -- */
 
 main {
     position: relative;
@@ -194,7 +194,7 @@ main {
 }
 
 
-/* -- CONNEXION / INSCRIPTION -- */
+/* ANCHOR -- CONNEXION / INSCRIPTION -- */
 
 .log {
     background-image: $bg-purple-gradiant-rev;
@@ -257,7 +257,7 @@ main {
     color: $dark-yellow;
 }
 
-/* -- CRÉATION DE PLANETE -- */
+/* ANCHOR -- CRÉATION DE PLANETE -- */
 
 .box-form {
     margin: 1.5em auto 0 auto;
@@ -358,7 +358,7 @@ main {
     }
 }
 
-/* -- AFFICHAGE PLANETE -- */
+/* ANCHOR -- AFFICHAGE PLANETE -- */
 
 #oneplanet {
     display: grid;
@@ -367,8 +367,6 @@ main {
     li {
         list-style: none;
     }
-
-    // margin-top: 4em;
 
     h4 {
         text-transform: uppercase;

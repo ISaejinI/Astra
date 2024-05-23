@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* -- IMPORTS -- */
+/* ANCHOR -- IMPORTS -- */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Syncopate&display=swap");
 /* -- COLORS -- */
 /* -- BACKGROUND -- */
@@ -89,7 +89,7 @@ h4 {
   color: #453287;
 }
 
-/* -- HEADER -- */
+/* ANCHOR -- HEADER -- */
 header {
   background-image: linear-gradient(to right bottom, #9678f5, #8166d8, #6d54bc, #5943a1, #453287);
   display: flex;
@@ -104,7 +104,7 @@ header nav a {
   padding: 0 1em;
 }
 
-/* -- FOOTER -- */
+/* ANCHOR -- FOOTER -- */
 footer {
   background-image: linear-gradient(to right bottom, #9678f5, #8166d8, #6d54bc, #5943a1, #453287);
   position: absolute;
@@ -121,7 +121,7 @@ footer .logo {
   font-size: 1.5em;
 }
 
-/* -- SECTION PLANET --*/
+/* ANCHOR -- SECTION PLANET --*/
 #planet {
   background-image: url("/Astra/src/Sky-bg.jpg");
   background-size: cover;
@@ -139,7 +139,7 @@ footer .logo {
   padding: 0.5em 1em;
 }
 
-/* -- CARROUSSEL -- */
+/* ANCHOR -- CARROUSSEL -- */
 #swiper-box {
   margin: 4em auto;
   max-width: 1100px;
@@ -175,7 +175,7 @@ footer .logo {
   font-size: 2em;
 }
 
-/* -- AFFICHAGE TOUTES LES PLANETES -- */
+/* ANCHOR -- AFFICHAGE TOUTES LES PLANETES -- */
 main {
   position: relative;
   height: 100%;
@@ -248,7 +248,7 @@ main {
   transition: max-height 0.2s ease-out;
 }
 
-/* -- CONNEXION / INSCRIPTION -- */
+/* ANCHOR -- CONNEXION / INSCRIPTION -- */
 .log {
   background-image: linear-gradient(to right bottom, #453287, #5943a1, #6d54bc, #8166d8, #9678f5);
   position: absolute;
@@ -303,7 +303,7 @@ main {
   color: #F5B849;
 }
 
-/* -- CRÉATION DE PLANETE -- */
+/* ANCHOR -- CRÉATION DE PLANETE -- */
 .box-form {
   margin: 1.5em auto 0 auto;
   background-color: #F5F5F5;
@@ -392,7 +392,7 @@ main {
   outline: none;
 }
 
-/* -- AFFICHAGE PLANETE -- */
+/* ANCHOR -- AFFICHAGE PLANETE -- */
 #oneplanet {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
