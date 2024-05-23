@@ -1,4 +1,4 @@
-<section id="galaxie">
+<section id="galaxie" class="container">
     <?php
     $galInfos = getGalaxy($_GET['id']);
     $galPlanets = getPlanetsFromGalaxy($_GET['id']);
@@ -15,13 +15,13 @@
             <p>planètes dans la galaxie</p>
         </div>
         <div>
-            <h2><?= $nbHabs ?></h2>
+            <h2><?= formatNumber($nbHabs) ?></h2>
             <p>habitants dans la galaxie</p>
         </div>
     </div>
 
 
-    <div class="swiper-box">
+    <div id="swiper-box">
         <h1>Toutes les planètes de la galaxie</h1>
         <div class="swiper">
             <div class="swiper-wrapper">

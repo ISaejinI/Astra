@@ -5,6 +5,7 @@
     global $dbAstra;
 
     require "./models/getInfos.php";
+    require "./models/globalFunctions.php";
 
     if (isset($_POST['create'])) {
         require "./models/form.php";

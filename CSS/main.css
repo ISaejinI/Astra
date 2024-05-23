@@ -36,6 +36,11 @@ a:hover {
   background-color: #141414;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
 .logo {
   font-family: "Syncopate", sans-serif;
   font-weight: 400;
@@ -73,7 +78,7 @@ h4 {
 .bu-head {
   background-color: #F5B849;
   padding: 0.2em 0.5em;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
 }
 .bu-head:hover {
@@ -295,7 +300,7 @@ main {
   padding: 0.7em;
   padding-left: 2.5em;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: #F5F5F5;
 }
 
@@ -305,12 +310,12 @@ main {
 
 /* ANCHOR -- CRÉATION DE PLANETE -- */
 .box-form {
-  margin: 1.5em auto 0 auto;
+  margin: 1.5em auto;
   background-color: #F5F5F5;
   color: #141414;
-  max-width: 1050px;
+  max-width: 1100px;
   padding: 0.5em 3em 2em 3em;
-  border-radius: 35px;
+  border-radius: 30px;
 }
 .box-form div {
   display: flex;
@@ -325,7 +330,7 @@ main {
   border: none;
   border: 1px solid rgba(20, 20, 20, 0.5019607843);
   padding: 0.5em 1.5em 0.5em 1.5em;
-  border-radius: 10px;
+  border-radius: 8px;
   max-width: fit-content;
 }
 .box-form div input:focus,
@@ -365,7 +370,7 @@ main {
   background-color: #9678F5;
   padding: 8px 12px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 .box-form input[type=file]::file-selector-button:hover {
   background-color: #453287;
@@ -383,7 +388,7 @@ main {
   border: none;
   border: 1px solid rgba(20, 20, 20, 0.5019607843);
   padding: 0.5em 1.5em 0.5em 1.5em;
-  border-radius: 10px;
+  border-radius: 8px;
   max-width: fit-content;
 }
 #addGalaxy input[type=text]:focus {
@@ -437,5 +442,7 @@ main {
   text-align: end;
   padding-top: 6em;
 }
+
+/* ANCHOR -- AFFICHAGE GALAXIE -- */
 
 /*# sourceMappingURL=main.css.map */

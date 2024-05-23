@@ -248,7 +248,7 @@ main {
         padding: 0.7em;
         padding-left: 2.5em;
         border: none;
-        border-radius: 10px;
+        border-radius: 8px;
         background-color: $white;
     }
 }
@@ -260,12 +260,12 @@ main {
 /* ANCHOR -- CRÉATION DE PLANETE -- */
 
 .box-form {
-    margin: 1.5em auto 0 auto;
+    margin: 1.5em auto ;
     background-color: $white;
     color: $black;
-    max-width: 1050px;
+    max-width: 1100px;
     padding: 0.5em 3em 2em 3em;
-    border-radius: 35px;
+    border-radius: 30px;
 
     div {
         display: flex;
@@ -280,7 +280,7 @@ main {
             border: none;
             border: 1px solid $black-op;
             padding: 0.5em 1.5em 0.5em 1.5em;
-            border-radius: 10px;
+            border-radius: 8px;
             max-width: fit-content;
 
             &:focus {
@@ -326,7 +326,7 @@ main {
             background-color: $light-purple;
             padding: 8px 12px;
             cursor: pointer;
-            border-radius: 10px;
+            border-radius: 8px;
 
             &:hover {
                 background-color: $dark-purple;
@@ -347,7 +347,7 @@ main {
         border: none;
         border: 1px solid $black-op;
         padding: 0.5em 1.5em 0.5em 1.5em;
-        border-radius: 10px;
+        border-radius: 8px;
         max-width: fit-content;
 
         &:focus {
@@ -408,3 +408,7 @@ main {
     text-align: end;
     padding-top: 6em;
 }
+
+
+/* ANCHOR -- AFFICHAGE GALAXIE -- */
+
