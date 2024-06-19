@@ -25,10 +25,9 @@
                     <option value="">-------</option>
                     <?php
                     $req = 'SELECT * FROM galaxies';
-                    $galaxies = $dbAstra->prepare($req);
-                    $galaxies->execute();
+                    $galaxies = getGalaxies();
 
-                    while ($line = $galaxies->fetch()) {
+                    while ($line = $galaxies) {
                         echo '<option value="' . $line["id"] . '">' . $line["name"] . '</option>';
                     };
 
